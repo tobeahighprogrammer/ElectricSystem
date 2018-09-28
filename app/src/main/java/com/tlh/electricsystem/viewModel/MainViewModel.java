@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.tlh.electricsystem.R;
-import com.tlh.electricsystem.base.BaseViewModel;
+import com.tlh.electricsystem.base.base.BaseViewModel;
 
 
 /**
@@ -43,13 +43,13 @@ public class MainViewModel extends BaseViewModel {
 //        setFragment(tabHost,"chat", "设备", R.mipmap.ic_launcher , DeviceFragment.class);
 //        setFragment(tabHost,"find", "任务", R.mipmap.ic_launcher , HomeFragment.class);
 //        setFragment(tabHost,"user", "我的", R.mipmap.ic_launcher , DeviceFragment.class);
-        tabHost.setCurrentTab(0);
+//        tabHost.setCurrentTab(0);
     }
 
     //设置底部tab的数据
     private void setFragment( FragmentTabHost tabHost ,String tag , String name , int selector , Class  fragment ) {
-        View indicator = getIndicatorView(name , mContext.getResources().getDrawable(selector));
-        tabHost.addTab(tabHost.newTabSpec(tag).setIndicator(indicator), fragment, null);
+        View indicator = getIndicatorView( name , mContext.getResources().getDrawable(selector));
+        tabHost.addTab( tabHost.newTabSpec(tag).setIndicator(indicator) , fragment, null);
     }
 
     //设置底部导航栏的内容

@@ -1,7 +1,6 @@
-package com.tlh.electricsystem.base;
+package com.tlh.electricsystem.base.base;
 
 import android.app.Activity;
-import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;

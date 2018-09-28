@@ -1,10 +1,9 @@
-package com.tlh.electricsystem.base;
+package com.tlh.electricsystem.base.base;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
