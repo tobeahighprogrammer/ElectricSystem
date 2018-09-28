@@ -51,28 +51,30 @@ public   class BaseViewModel {
         }
         mContext.startActivity(intent);
     }
-    /**
-     * 跳转容器页面
-     * @param canonicalName  Fragment.class.getCanonicalName()
-     * @param bundle        跳转所携带的信息
-     */
-    public void startContainerActivity(String canonicalName, Bundle bundle) {
-        Intent intent = new Intent(mContext, ContainerActivity.class);
-        intent.putExtra(ContainerActivity.FRAGMENT, canonicalName);
-        if (bundle != null) {
-            intent.putExtra(ContainerActivity.BUNDLE, bundle);
-        }
-        mContext.startActivity(intent);
-    }
 
-    /**
-     * 跳转容器页面
-     * @param canonicalName   Fragment.class.getCanonicalName()
-     */
-    public void startContainerActivity(String canonicalName) {
-        Intent intent = new Intent(mContext, ContainerActivity.class);
-        intent.putExtra(ContainerActivity.FRAGMENT, canonicalName);
-        mContext.startActivity(intent);
-    }
+
+//    /**
+//     * 跳转容器页面
+//     * @param canonicalName  Fragment.class.getCanonicalName()
+//     * @param bundle        跳转所携带的信息
+//     */
+//    public void startContainerActivity(String canonicalName, Bundle bundle) {
+//        Intent intent = new Intent(mContext, ContainerActivity.class);
+//        intent.putExtra(ContainerActivity.FRAGMENT, canonicalName);
+//        if (bundle != null) {
+//            intent.putExtra(ContainerActivity.BUNDLE, bundle);
+//        }
+//        mContext.startActivity(intent);
+//    }
+//
+//    /**
+//     * 跳转容器页面
+//     * @param canonicalName   Fragment.class.getCanonicalName()
+//     */
+//    public void startContainerActivity(String canonicalName) {
+//        Intent intent = new Intent(mContext, ContainerActivity.class);
+//        intent.putExtra(ContainerActivity.FRAGMENT, canonicalName);
+//        mContext.startActivity(intent);
+//    }
 
 }
