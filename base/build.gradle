@@ -36,6 +36,4 @@ dependencies {
 
     //下拉刷新控件
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
-    //Rxjava 缓存
-    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
 }

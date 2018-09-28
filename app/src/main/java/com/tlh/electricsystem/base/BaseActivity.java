@@ -1,17 +1,20 @@
-package com.tlh.electricsystem.base.base;
+package com.tlh.electricsystem.base;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+
 
 /**
  * Created by Administrator on 2018/9/27 0027.
  */
 
-public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseViewModel >
-        extends RxAppCompatActivity implements IBaseActivity  {
+public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseViewModel>
+        extends RxAppCompatActivity implements IBaseActivity {
 
     protected V mBinding ;
     protected VM mViewModel ;

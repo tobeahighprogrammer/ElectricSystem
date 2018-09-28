@@ -1,4 +1,4 @@
-package com.tlh.electricsystem.base.base;
+package com.tlh.electricsystem.base;
 
 import android.app.Activity;
 import android.content.Context;
@@ -23,9 +23,9 @@ public abstract class BaseFragment<V extends ViewDataBinding ,VM extends BaseVie
     protected Activity m_Activity;
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        m_Activity = getActivity();
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        m_Activity = activity;
     }
 
     @Override

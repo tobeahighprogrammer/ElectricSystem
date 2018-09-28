@@ -2,7 +2,7 @@ package com.tlh.electricsystem;
 
 import android.os.Bundle;
 
-import com.tlh.electricsystem.base.base.BaseActivity;
+import com.tlh.electricsystem.base.BaseActivity;
 import com.tlh.electricsystem.databinding.ActivityMainBinding;
 import com.tlh.electricsystem.viewModel.MainViewModel;
 
@@ -19,12 +19,12 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
 
     @Override
     public MainViewModel initViewModel() {
-        return new MainViewModel(this);
+        return new MainViewModel(this );
     }
 
     //初始化数据
     @Override
     public void initData() {
-        mViewModel.initTabHost(mBinding.mainTabHost);
+        mViewModel.initTabHost( mBinding.mainTabHost );
     }
 }

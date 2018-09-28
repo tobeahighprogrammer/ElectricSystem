@@ -1,4 +1,4 @@
-package com.tlh.electricsystem.base.base;
+package com.tlh.electricsystem.base;
 
 import android.app.Fragment;
 import android.content.Context;

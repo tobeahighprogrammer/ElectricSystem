@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.tlh.electricsystem.R;
-import com.tlh.electricsystem.base.base.BaseViewModel;
+import com.tlh.electricsystem.base.BaseViewModel;
 
 
 /**
@@ -28,7 +28,7 @@ public class MainViewModel extends BaseViewModel {
         super(mContext);
     }
 
-    //初始化
+    //初始化TabHost
     public void initTabHost(FragmentTabHost tabHost ){
         FragmentManager fragmentManager = ((FragmentActivity)mContext).getSupportFragmentManager();
         tabHost.setup(mContext, fragmentManager, R.id.main_real_tab);
