@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 27
@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.tlh.electricsystem.operation"
+//        applicationId "com.tlh.electricsystem.operation"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
@@ -33,4 +33,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    compile project(':base')
+
 }
