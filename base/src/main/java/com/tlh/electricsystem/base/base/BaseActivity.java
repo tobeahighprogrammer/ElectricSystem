@@ -4,7 +4,6 @@ import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 /**
