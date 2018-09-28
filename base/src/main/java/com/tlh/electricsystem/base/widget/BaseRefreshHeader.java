@@ -129,7 +129,6 @@ public class BaseRefreshHeader extends LinearLayout implements RefreshHeader {
         } else {
             Time = String.valueOf(c.get(Calendar.HOUR_OF_DAY)) + " : " + "0" + String.valueOf(mm);
         }
-
         return Time;
     }
 }

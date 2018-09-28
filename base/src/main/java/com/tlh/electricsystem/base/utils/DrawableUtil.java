@@ -6,6 +6,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.os.Build;
 import android.widget.TextView;
 
 /**
@@ -20,7 +21,6 @@ public class DrawableUtil {
 
     /**
      * 得到实心的drawable, 一般作为选中，点中的效果
-     *
      * @param cornerRadius 圆角半径
      * @param solidColor   实心颜色
      * @return 得到实心效果
@@ -175,8 +175,12 @@ public class DrawableUtil {
      * @param normalColor  正常的颜色
      */
     public static void setTextTheme(TextView textView, Drawable drawable, int pressedColor, int normalColor) {
-        textView.setBackground(drawable);
-        setTextTheme(textView, pressedColor, normalColor);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            textView.setBackground(drawable);
+        }else{
+            textView.setBackgroundDrawable(drawable);
+        }
+        setTextTheme( textView , pressedColor , normalColor);
     }
 
     /**
@@ -201,7 +205,7 @@ public class DrawableUtil {
     public static ColorStateList getColorStateList(int pressedColor, int normalColor) {
         //其他状态默认为白色
         return new ColorStateList(
-                new int[][]{{android.R.attr.state_enabled, android.R.attr.state_pressed}, {android.R.attr.state_enabled}, {}},
+                new int[][]{{android.R.attr.state_enabled, android.R.attr.state_pressed }, { android.R.attr.state_enabled }, {} },
                 new int[]{pressedColor, normalColor, Color.WHITE});
     }
 
