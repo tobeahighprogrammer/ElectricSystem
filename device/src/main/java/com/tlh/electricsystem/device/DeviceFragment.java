@@ -11,6 +11,7 @@ import com.tlh.electricsystem.device.bean.DeviceBean;
 import com.tlh.electricsystem.device.databinding.FragmentDeviceBinding;
 import com.tlh.electricsystem.device.viewModel.DeviceViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -43,7 +44,13 @@ public class DeviceFragment extends BaseFragment< FragmentDeviceBinding , Device
     @Override
     public void initData() {
         super.initData();
-        mDeviceAdapter = new DeviceAdapter(mDeviceBean);
-        RecyclerViewHelper.initRecyclerViewV(m_Activity,mBinding.deviceRecyclerView,mDeviceAdapter);
+        mDeviceBean= new ArrayList<>();
+        mDeviceBean.add(new DeviceBean(1));
+        mDeviceBean.add(new DeviceBean(2));
+        mDeviceBean.add(new DeviceBean(2));
+        mDeviceBean.add(new DeviceBean(2));
+        mDeviceBean.add(new DeviceBean(2));
+        mDeviceAdapter = new DeviceAdapter( mDeviceBean );
+        RecyclerViewHelper.initRecyclerViewV( m_Activity ,mBinding.deviceRecyclerView ,mDeviceAdapter );
     }
 }

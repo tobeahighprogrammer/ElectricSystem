@@ -3,22 +3,22 @@
 
     <data>
 
-        <import type="com.tlh.electricsystem.device.viewModel.DeviceViewModel" />
+        <import type="com.tlh.electricsystem.device.viewModel.DeviceInfoViewModel" />
 
         <variable
-            name="ViewModel"
-            type="DeviceViewModel" />
+            name="DeviceInfoViewModel"
+            type="DeviceInfoViewModel" />
 
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         tools:context="com.example.administrator.demo.MainActivity">
 
         <android.support.v7.widget.CardView
+            android:id="@+id/card_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardElevation="10dp">
@@ -26,40 +26,61 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:orientation="horizontal"
                 android:layout_margin="2dp"
-                android:background="#fff">
+                android:background="@color/white"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="合肥市" />
+                    android:text="电站名称" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#ccc" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="电站类型" />
+                    android:text="设备类型" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#ccc" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="电压等级" />
+                    android:text="设备电压" />
+
             </LinearLayout>
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/deviceRecyclerView"
+            android:id="@+id/deviceInfoRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/card_header">
 
         </android.support.v7.widget.RecyclerView>
 
-    </LinearLayout>
+        <include
+            android:id="@+id/rl_location"
+            layout="@layout/button_location_layout" />
+
+    </RelativeLayout>
 
 </layout>

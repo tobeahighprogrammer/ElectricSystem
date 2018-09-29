@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
 import android.view.View;
 import android.widget.TextView;
-
 import com.tlh.electricsystem.R;
 import com.tlh.electricsystem.base.base.BaseViewModel;
 import com.tlh.electricsystem.desk.fragment.DeskFragment;

@@ -92,8 +92,8 @@ public class RecyclerViewHelper {
     }
 
     //设置 setNestedScrollingEnabled  b 状态
-    public static void initRecyclerViewV(Context context, RecyclerView view,
-                                         RecyclerView.Adapter adapter, boolean b) {
+    public static void initRecyclerViewV( Context context, RecyclerView view,
+                                         RecyclerView.Adapter adapter, boolean b ) {
         view.setNestedScrollingEnabled(b);
         initRecyclerViewV(context, view, adapter);
     }

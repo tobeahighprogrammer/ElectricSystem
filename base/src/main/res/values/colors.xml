@@ -22,4 +22,6 @@
     <!--内容背景颜色-->
     <color name="white">#FFFFFF</color>
 
+    <color name="light_green">#C4E5E7 </color>
+
 </resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.tlh.electricsystem.viewModel.LoginViewModel"/>
+        <variable
+            name="LoginViewModel"
+            type="LoginViewModel"/>
+
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@mipmap/login_bg"
+        tools:context="com.example.administrator.demo.MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/rel_phone"
+            android:layout_below="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="32dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/elogin_et_phone_layout"
+                android:layout_width="match_parent"
+                app:hintTextAppearance="@style/MyStyle"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/melogin_et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/editext_color"
+                    android:gravity="left|center_vertical"
+                    android:hint="输入PMS用户名"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/editext_color"
+                    android:maxLength="11"
+                    android:textSize="14dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <ImageView
+                android:id="@+id/melogin_iv_clearphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_pass"
+            android:layout_below="@+id/rel_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                app:hintTextAppearance="@style/MyStyle"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/melogin_et_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/editext_color"
+                    android:gravity="left|center_vertical"
+                    android:hint="请输入密码"
+                    android:textColor="@color/white"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/editext_color"
+                    android:maxLength="32"
+                    android:textSize="14dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <ImageView
+                android:id="@+id/melogin_iv_clearpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bu_next_step"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:layout_below="@+id/rel_pass"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="登   录"
+            android:gravity="center"
+            android:textColor="#00706B "
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+</layout>

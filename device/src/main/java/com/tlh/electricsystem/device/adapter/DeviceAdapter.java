@@ -22,12 +22,12 @@ public class DeviceAdapter extends BaseMultiItemQuickAdapter<DeviceBean ,BaseVie
      */
     public DeviceAdapter( List<DeviceBean> data ) {
         super(data);
-        addItemType(ITEM_TYPE_DEVICE_1 , R.layout.device_type_item);
-        addItemType(ITEM_TYPE_DEVICE_2 , R.layout.device_type_item);
+        addItemType( ITEM_TYPE_DEVICE_1 , R.layout.device_type_item );
+        addItemType( ITEM_TYPE_DEVICE_2 , R.layout.device_info_item );
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, DeviceBean item) {
+    protected void convert( BaseViewHolder helper, DeviceBean item ) {
 
     }
 }

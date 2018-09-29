@@ -3,5 +3,5 @@
     <color name="colorPrimary">#00706B</color>
     <color name="colorPrimaryDark">#00706B</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="editext_color">#C4E5E7 </color>
 </resources>

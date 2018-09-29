@@ -7,9 +7,14 @@ import com.chad.library.adapter.base.entity.MultiItemEntity;
  */
 
 public class DeviceBean implements MultiItemEntity {
+    private int type;
+
+    public DeviceBean(int type) {
+        this.type = type;
+    }
 
     @Override
     public int getItemType() {
-        return 0;
+        return type;
     }
 }
