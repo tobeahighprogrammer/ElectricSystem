@@ -2,12 +2,16 @@
 <resources>
     <!--主题绿色-->
     <color name="color_theme_green">#009D85</color>
+
     <!--黑色字体-->
     <color name="color_text_black">#4A4A4A</color>
     <!--灰色字体-->
     <color name="color_text_grey">#969594</color>
     <!--橙色字体-->
     <color name="color_text_yellow">#F6AB00</color>
+
+    <!--页面浅灰色背景-->
+    <color name="color_background_grey">#f1f1f1</color>
 
     <!--下划线-->
     <color name="division_color">#26272B</color>
