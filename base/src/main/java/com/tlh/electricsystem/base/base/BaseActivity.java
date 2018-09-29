@@ -20,7 +20,7 @@ public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseV
 
     protected V mBinding ;
     protected VM mViewModel ;
-
+    private int BR_ID ;
     @Override
     protected void onCreate( @Nullable Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
@@ -40,7 +40,10 @@ public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseV
         Drawable drawable = res.getDrawable(R.color.bkcolor);
         getWindow().setBackgroundDrawable(drawable);
         mBinding = DataBindingUtil.setContentView(this, initContentView(savedInstanceState));
-        mBinding.setVariable( initVariableId() , mViewModel = initViewModel());
+        BR_ID = initVariableId();
+        if (BR_ID != 0 ) {
+            mBinding.setVariable(initVariableId(), mViewModel = initViewModel());
+        }
     }
 
     @Override
