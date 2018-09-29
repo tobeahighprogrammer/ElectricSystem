@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import com.tlh.electricsystem.R;
 import com.tlh.electricsystem.base.base.BaseViewModel;
+import com.tlh.electricsystem.desk.DeskFragment;
+import com.tlh.electricsystem.device.DeviceFragment;
+import com.tlh.electricsystem.my.UserFragment;
+import com.tlh.electricsystem.operation.OperationFragment;
 
 
 /**
@@ -39,11 +43,11 @@ public class MainViewModel extends BaseViewModel {
 
     //初始化Fragment
     private void initFragment(FragmentTabHost tabHost) {
-//        setFragment(tabHost,"dynamic", "工作站", R.mipmap.ic_launcher , HomeFragment.class);
-//        setFragment(tabHost,"chat", "设备", R.mipmap.ic_launcher , DeviceFragment.class);
-//        setFragment(tabHost,"find", "任务", R.mipmap.ic_launcher , HomeFragment.class);
-//        setFragment(tabHost,"user", "我的", R.mipmap.ic_launcher , DeviceFragment.class);
-//        tabHost.setCurrentTab(0);
+        setFragment(tabHost,"dynamic", "工作站", R.mipmap.ic_launcher , DeskFragment.class);
+        setFragment(tabHost,"chat", "设备", R.mipmap.ic_launcher , DeviceFragment.class);
+        setFragment(tabHost,"find", "任务", R.mipmap.ic_launcher , OperationFragment.class);
+        setFragment(tabHost,"user", "我的", R.mipmap.ic_launcher , UserFragment.class);
+        tabHost.setCurrentTab(0);
     }
 
     //设置底部tab的数据
