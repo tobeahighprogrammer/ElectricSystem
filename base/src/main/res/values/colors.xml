@@ -12,6 +12,8 @@
 
     <!--页面浅灰色背景-->
     <color name="color_background_grey">#f1f1f1</color>
+    <!--浅灰色分割线-->
+    <color name="color_divider_grey">#E0E0D8</color>
 
     <!--下划线-->
     <color name="division_color">#26272B</color>
