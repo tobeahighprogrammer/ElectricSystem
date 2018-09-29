@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Base</string>
+
+    <!--模块名-->
+    <string name="module_desk_name">工作</string>
+    <string name="module_device_name">设备</string>
+    <string name="module_operation_name">运维</string>
+    <string name="module_my_name">我的</string>
+
 </resources>

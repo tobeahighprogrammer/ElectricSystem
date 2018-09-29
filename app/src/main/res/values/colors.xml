@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#009D85</color>
-    <color name="colorPrimaryDark">#009D85</color>
+    <color name="colorPrimary">#00706B</color>
+    <color name="colorPrimaryDark">#00706B</color>
     <color name="colorAccent">#FF4081</color>
-    <!--下划线-->
-    <color name="division_color">#26272B</color>
-    <!--内容文本字体颜色-->
-    <color name="content_color">#292c34</color>
+
 </resources>
