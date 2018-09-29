@@ -3,28 +3,49 @@ package com.tlh.electricsystem.desk.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
+import com.tlh.electricsystem.base.base.BaseFragment;
+import com.tlh.electricsystem.base.utils.RecyclerViewHelper;
 import com.tlh.electricsystem.desk.R;
+import com.tlh.electricsystem.desk.adapter.DeskMenuAdapter;
+import com.tlh.electricsystem.desk.databinding.FragmentDeskBinding;
+import com.tlh.electricsystem.desk.viewModel.DeskViewModel;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
  * 工作台首页
  * A simple {@link Fragment} subclass.
  */
-public class DeskFragment extends Fragment {
+public class DeskFragment extends BaseFragment<FragmentDeskBinding,DeskViewModel> {
 
-
-    public DeskFragment() {
-        // Required empty public constructor
-    }
-
+    private List<String> menuList = new ArrayList<>();
+    private static String[] menuNames = {"缺陷上报","隐患上报","待我审核","操作票","工作票"};
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_desk, container, false);
+    public int initContentView(Bundle savedInstanceState) {
+        return R.layout.fragment_desk;
     }
 
+    @Override
+    public int initVariableId() {
+        return com.tlh.electricsystem.desk.BR.ViewModel;
+    }
+
+    @Override
+    public DeskViewModel initViewModel() {
+        return new DeskViewModel(this);
+    }
+
+    @Override
+    public void initData() {
+        super.initData();
+        List<String> menuList = new ArrayList<>();
+        menuList.addAll(Arrays.asList(menuNames));
+        DeskMenuAdapter deskMenuAdapter = new DeskMenuAdapter(m_Activity,menuList);
+        RecyclerViewHelper.initRecyclerViewG(m_Activity,mBinding.rvDeskMenu,deskMenuAdapter,menuList.size());
+    }
 }
