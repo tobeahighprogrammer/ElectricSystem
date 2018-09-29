@@ -1,14 +1,17 @@
 package com.tlh.electricsystem.base.base;
 
 import android.app.Activity;
+import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.tlh.electricsystem.base.R;
 import com.trello.rxlifecycle2.components.support.RxFragment;
 
 /**
@@ -41,6 +44,9 @@ public abstract class BaseFragment<V extends ViewDataBinding ,VM extends BaseVie
      */
     private void initViewDataBinding(Bundle savedInstanceState) {
         //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
+        Resources res = getResources();
+        Drawable drawable = res.getDrawable(R.color.bkcolor);
+        m_Activity.getWindow().setBackgroundDrawable(drawable);
         mBinding = DataBindingUtil.setContentView(m_Activity, initContentView(savedInstanceState));
         mBinding.setVariable(initVariableId(), mViewMidel = initViewModel());
     }

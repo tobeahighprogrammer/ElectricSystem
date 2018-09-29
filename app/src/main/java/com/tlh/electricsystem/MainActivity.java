@@ -6,7 +6,7 @@ import com.tlh.electricsystem.databinding.ActivityMainBinding;
 import com.tlh.electricsystem.viewModel.MainViewModel;
 
 
-public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewModel> {
+public class MainActivity extends BaseActivity< ActivityMainBinding , MainViewModel> {
 
     @Override
     public int initContentView(Bundle savedInstanceState) {
@@ -26,4 +26,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     public void initData() {
         mViewModel.initTabHost( mBinding.mainTabHost );
     }
+
+
 }

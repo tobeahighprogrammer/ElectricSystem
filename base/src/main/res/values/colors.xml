@@ -13,4 +13,8 @@
     <color name="division_color">#26272B</color>
     <!--内容文本字体颜色-->
     <color name="content_color">#292c34</color>
+    <!--内容背景颜色-->
+    <color name="bkcolor">#E0E0D8</color>
+
+
 </resources>

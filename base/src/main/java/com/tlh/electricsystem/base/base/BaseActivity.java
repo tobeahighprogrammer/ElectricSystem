@@ -1,10 +1,13 @@
 package com.tlh.electricsystem.base.base;
 
+import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.tlh.electricsystem.base.R;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 
@@ -33,6 +36,9 @@ public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseV
      */
     private void initViewDataBinding(Bundle savedInstanceState) {
         //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
+        Resources res = getResources();
+        Drawable drawable = res.getDrawable(R.color.bkcolor);
+        getWindow().setBackgroundDrawable(drawable);
         mBinding = DataBindingUtil.setContentView(this, initContentView(savedInstanceState));
         mBinding.setVariable( initVariableId() , mViewModel = initViewModel());
     }

@@ -1,10 +1,9 @@
 package com.tlh.electricsystem.base.base;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 
 /**
  * Created by Administrator on 2018/9/27 0027.
@@ -23,11 +22,7 @@ public   class BaseViewModel {
     //传递Fragment 上下文对象
     public BaseViewModel( Fragment mFragment ) {
         this.mFragment = mFragment;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            this.mContext = mFragment.getContext();
-        } else {
-            this.mContext = mFragment.getActivity();
-        }
+        this.mContext = mFragment.getContext();
     }
     /**
      * 跳转页面
