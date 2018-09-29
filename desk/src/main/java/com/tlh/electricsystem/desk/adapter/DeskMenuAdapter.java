@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.tlh.electricsystem.desk.R;
+import com.tlh.electricsystem.desk.databinding.ItemDeskMenuBinding;
 
 import java.util.List;
 
@@ -32,7 +33,10 @@ public class DeskMenuAdapter extends RecyclerView.Adapter<DeskMenuAdapter.BindVi
 
     @Override
     public void onBindViewHolder(@NonNull BindViewHolder holder, int position) {
+        ItemDeskMenuBinding binding = (ItemDeskMenuBinding)holder.getBinding();
         String name = dataList.get(position);
+        binding.tvDeskMenu.setText(name);
+        binding.ivDeskMenu.setImageResource(R.mipmap.ic_launcher);
 
     }
 
