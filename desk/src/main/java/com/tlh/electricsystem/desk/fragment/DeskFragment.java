@@ -2,7 +2,10 @@ package com.tlh.electricsystem.desk.fragment;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 
 import com.tlh.electricsystem.base.base.BaseFragment;
 import com.tlh.electricsystem.base.utils.RecyclerViewHelper;
@@ -26,7 +29,7 @@ public class DeskFragment extends BaseFragment<FragmentDeskBinding,DeskViewModel
     private static String[] menuNames = {"缺陷上报","隐患上报","待我审核","操作票","工作票"};
 
     @Override
-    public int initContentView(Bundle savedInstanceState) {
+    public int initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return R.layout.fragment_desk;
     }
 

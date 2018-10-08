@@ -9,4 +9,6 @@ public interface IBaseActivity {
     void initParam();
 
     void initData();
+
+    void initListener();
 }

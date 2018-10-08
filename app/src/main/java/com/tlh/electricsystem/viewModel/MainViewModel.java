@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.tlh.electricsystem.R;
 import com.tlh.electricsystem.base.base.BaseViewModel;
 import com.tlh.electricsystem.desk.fragment.DeskFragment;
-import com.tlh.electricsystem.device.DeviceFragment;
+import com.tlh.electricsystem.device.fragment.DeviceFragment;
 import com.tlh.electricsystem.my.UserFragment;
 import com.tlh.electricsystem.operation.OperationFragment;
 

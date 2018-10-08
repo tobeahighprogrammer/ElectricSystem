@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
         <variable
-            name="DeviceInfoViewModel"
-            type="com.tlh.electricsystem.device.viewModel.DeviceInfoViewModel" />
+            name="IntervalViewModel"
+            type="com.tlh.electricsystem.device.viewModel.IntervalViewModel"/>
+
 
     </data>
 
@@ -67,7 +67,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/deviceInfoRecyclerView"
+            android:id="@+id/intervalInfoRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/card_header">

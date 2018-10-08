@@ -21,9 +21,9 @@ import com.trello.rxlifecycle2.components.support.RxFragment;
 public abstract class BaseFragment<V extends ViewDataBinding ,VM extends BaseViewModel> extends RxFragment implements IBaseActivity {
 
     protected V mBinding ;
-    protected VM mViewMidel ;
+    protected VM mViewModel ;
     protected Activity m_Activity;
-
+    protected int BR_ID ;
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -43,27 +43,30 @@ public abstract class BaseFragment<V extends ViewDataBinding ,VM extends BaseVie
     /**
      * 注入绑定
      */
-    private void initViewDataBinding(Bundle savedInstanceState) {
+    private void initViewDataBinding(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
-        mBinding = DataBindingUtil.setContentView( m_Activity , initContentView(savedInstanceState));
-        mBinding.setVariable( initVariableId() , mViewMidel = initViewModel() );
+        mBinding = DataBindingUtil.inflate(inflater, initContentView(inflater, container, savedInstanceState), container, false);
+        BR_ID = initVariableId();
+        if (BR_ID != 0 ) {
+            mBinding.setVariable(initVariableId(), mViewModel = initViewModel());
+        }
     }
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mViewMidel.mFragment != null ) {
-            mViewMidel.mFragment = null ;
+        if (mViewModel.mFragment != null ) {
+            mViewModel.mFragment = null ;
         }
-        if (mViewMidel.mContext != null ) {
-            mViewMidel.mContext = null ;
+        if (mViewModel.mContext != null ) {
+            mViewModel.mContext = null ;
         }
-        mViewMidel = null ;
+        mViewModel = null ;
         mBinding.unbind() ;
     }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        initViewDataBinding(savedInstanceState);
+        initViewDataBinding(inflater, container ,savedInstanceState);
         return mBinding.getRoot();
     }
 
@@ -72,13 +75,23 @@ public abstract class BaseFragment<V extends ViewDataBinding ,VM extends BaseVie
     public void initData() { }
 
     @Override
+    public void initListener() { }
+
+    @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initData();
+        initListener();
     }
 
-    //设置布局的ID
-    public abstract int initContentView( Bundle savedInstanceState );
+
+
+    /**
+     * 初始化根布局
+     *
+     * @return 布局layout的id
+     */
+    public abstract int initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState);
     //初始化布局ID
     public abstract int initVariableId();
 
