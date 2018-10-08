@@ -1,33 +1,33 @@
 package com.tlh.electricsystem;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-
 import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.base.base.BaseViewModel;
 import com.tlh.electricsystem.databinding.ActivitySplashBinding;
-
 import java.lang.ref.SoftReference;
 import java.util.concurrent.TimeUnit;
-
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 
+/**
+ *  sj: 2018年9月30日14:46:44
+ *  name :ts
+ *  用途L: 闪屏页面！
+ */
 public class SplashActivity extends BaseActivity<ActivitySplashBinding, BaseViewModel> {
     private Disposable mdDisposable;
-    private SplashHander splashHander;
+    private SplashHandler splashHander;
 
     //计时器
-    private static class SplashHander extends Handler {
+    private static class SplashHandler extends Handler {
         private SoftReference<SplashActivity> softReference;
 
-        public SplashHander(SplashActivity softReference) {
+        public SplashHandler(SplashActivity softReference) {
             this.softReference = new SoftReference<>(softReference);
         }
 
@@ -76,15 +76,14 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, BaseView
     public void initData() {
         super.initData();
         mBinding.timerText.setEnabled(false);
-        splashHander = new SplashHander(this);
+        splashHander = new SplashHandler(this);
         splashHander.sendEmptyMessageDelayed(0, 1000);
-//        Glide.with(this).load("https://myimage.immouo.com//o_1cbejc2kogol1pgddlub5r16o0cs.jpg").into(imageView);
     }
 
     //设置计数时间
-    public void setTextMiss(Long aLong) {
+    public void setTextMiss( Long aLong ) {
         mBinding.timerText.setEnabled(true);
-        mBinding.timerText.setText("跳过 " + (3 - aLong));
+        runOnUiThread(() -> mBinding.timerText.setText("跳过 "+(3 - aLong) ));
     }
 
     //跳转登录页面
@@ -108,5 +107,10 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, BaseView
         if (mdDisposable != null) {
             mdDisposable.dispose();
         }
+    }
+
+    @Override
+    public void initListener() {
+        mBinding.timerText.setOnClickListener(v -> { startAct(); });
     }
 }

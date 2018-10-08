@@ -20,7 +20,8 @@ public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseV
 
     protected V mBinding ;
     protected VM mViewModel ;
-    private int BR_ID ;
+    protected int BR_ID ;
+
     @Override
     protected void onCreate( @Nullable Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
@@ -29,6 +30,7 @@ public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseV
         initViewDataBinding( savedInstanceState );
         //初始化数据
         initData();
+        initListener();
     }
 
     /**
@@ -41,8 +43,9 @@ public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseV
         getWindow().setBackgroundDrawable(drawable);
         mBinding = DataBindingUtil.setContentView(this, initContentView(savedInstanceState));
         BR_ID = initVariableId();
-        if (BR_ID != 0 ) {
-            mBinding.setVariable(initVariableId(), mViewModel = initViewModel());
+        mViewModel = initViewModel();
+        if ( BR_ID != 0  && mViewModel != null ) {
+            mBinding.setVariable(initVariableId(), mViewModel);
         }
     }
 
@@ -74,4 +77,9 @@ public abstract class BaseActivity< V extends ViewDataBinding , VM extends BaseV
     //初始化参数
     @Override
     public void initParam() { }
+    //
+    @Override
+    public void initListener() {
+
+    }
 }

@@ -20,10 +20,12 @@
     <!--内容文本字体颜色-->
     <color name="content_color">#292c34</color>
     <!--内容背景颜色-->
-    <color name="bkcolor">#E0E0D8</color>
+    <color name="bkcolor">#FAFAFA</color>
     <!--内容背景颜色-->
     <color name="white">#FFFFFF</color>
 
     <color name="light_green">#C4E5E7 </color>
+
+    <color name="text_bg">#E0E0D8</color>
 
 </resources>

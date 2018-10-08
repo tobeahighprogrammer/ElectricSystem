@@ -57,4 +57,6 @@ dependencies {
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
     //网络
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //tabLayout
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'
 }
