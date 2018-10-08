@@ -50,7 +50,7 @@ public class IntervalFragment extends BaseFragment<FragmentIntervalBinding , Int
         mIntervalBeans.add(new IntervalBean());
         mIntervalBeans.add(new IntervalBean());
         mIntervalBeans.add(new IntervalBean());
-        mIntervalAdapter = new IntervalAdapter( R.layout.device_interval_item, mIntervalBeans );
-        RecyclerViewHelper.initRecyclerViewV( m_Activity , mBinding.intervalInfoRecyclerView , mIntervalAdapter );
+        mIntervalAdapter = new IntervalAdapter( R.layout.device_interval_item , mIntervalBeans ) ;
+        RecyclerViewHelper.initRecyclerViewV( m_Activity , mBinding.intervalInfoRecyclerView , mIntervalAdapter ) ;
     }
 }

@@ -10,7 +10,7 @@ import com.tlh.electricsystem.base.base.BaseViewModel;
 
 public class IntervalViewModel extends BaseViewModel {
 
-    public IntervalViewModel(Fragment mFragment) {
+    public IntervalViewModel( Fragment mFragment) {
         super(mFragment);
     }
 }

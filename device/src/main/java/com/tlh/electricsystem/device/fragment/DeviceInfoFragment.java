@@ -4,6 +4,7 @@ package com.tlh.electricsystem.device.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,6 @@ public class DeviceInfoFragment extends BaseFragment<FragmentDeviceInfoBinding ,
 
     @Override
     public void initListener() {
-        mViewModel.addOnItemTouchListener( mBinding.deviceInfoRecyclerView);
+        mViewModel.addOnItemTouchListener( mBinding.deviceInfoRecyclerView );
     }
 }
