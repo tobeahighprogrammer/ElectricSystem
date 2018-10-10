@@ -25,10 +25,10 @@ public class DeviceInfoViewModel extends BaseViewModel {
     public void addOnItemTouchListener(RecyclerView deviceInfoRecyclerView) {
         deviceInfoRecyclerView.addOnItemTouchListener(new OnItemClickListener() {
             @Override
-            public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
-                mDeviceInfoBean = (DeviceInfoBean) adapter.getItem(position);
+            public void onSimpleItemClick( BaseQuickAdapter adapter , View view , int position ) {
+                mDeviceInfoBean = ( DeviceInfoBean ) adapter.getItem( position ) ;
                 //使用fragment
-                startContainerActivity(IntervalFragment.class.getCanonicalName());
+                startContainerActivity( IntervalFragment.class.getCanonicalName() );
             }
         });
     }
