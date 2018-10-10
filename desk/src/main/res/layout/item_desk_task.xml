@@ -1,7 +1,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="110dp"
         android:orientation="horizontal"
         android:background="@android:color/white">
 
@@ -9,6 +10,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_divider_grey"/>
 
             <ImageView
                 android:id="@+id/iv_desk_task"
@@ -28,11 +34,20 @@
             android:layout_height="match_parent"
             android:layout_weight="6"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:paddingBottom="8dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="-8dp"
+                android:background="@color/color_divider_grey"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:textSize="14sp"
                 android:textColor="@color/color_text_black"
                 android:text="巡视计划名称"/>
@@ -41,6 +56,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:gravity="center_vertical"
                 android:layout_marginTop="8dp">
 
@@ -64,6 +81,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp">
@@ -94,6 +113,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp">

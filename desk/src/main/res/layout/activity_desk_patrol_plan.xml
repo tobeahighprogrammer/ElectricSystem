@@ -2,72 +2,121 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <!--<variable-->
+            <!--name="DeviceContentViewModel"-->
+            <!--type="com.tlh.electricsystem.device.viewModel.DeviceContentViewModel" />-->
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/color_background_grey"
         android:orientation="vertical">
 
-       <include
-           android:id="@+id/include_patrol_plan"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           layout="@layout/layout_patrol_plan_top"/>
+        <include
+            layout="@layout/layout_title_bar"/>
 
-        <View
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:background="@color/color_divider_grey"/>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_height="match_parent"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                <RelativeLayout
-                    android:layout_width="0dp"
+                <include
+                    android:id="@+id/include_patrol_plan"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    layout="@layout/layout_patrol_plan_top"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:drawablePadding="10dp"
-                        android:textSize="14sp"
-                        android:textColor="@color/color_text_yellow"
-                        android:text="巡视班组"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/shape_divider_green"/>
 
-                </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp">
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:drawablePadding="10dp"
-                        android:layout_marginTop="8dp"
-                        android:textSize="14sp"
-                        android:textColor="@color/color_text_black"
-                        android:text="计划状态"/>
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
 
-                </RelativeLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawablePadding="10dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/color_text_yellow"
+                                android:text="巡视班组"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawablePadding="10dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/color_text_black"
+                                android:text="计划状态"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    layout="@layout/item_common_patrol_plan"
+                    android:layout_marginTop="10dp"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    layout="@layout/item_common_patrol_plan" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    layout="@layout/item_common_patrol_plan" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    layout="@layout/item_common_patrol_plan"
+                    android:layout_marginTop="10dp"/>
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    layout="@layout/item_common_patrol_plan" />
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </ScrollView>
 
     </LinearLayout>
 </layout>

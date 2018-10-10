@@ -11,6 +11,7 @@ import com.tlh.electricsystem.base.base.BaseFragment;
 import com.tlh.electricsystem.base.utils.RecyclerViewHelper;
 import com.tlh.electricsystem.desk.R;
 import com.tlh.electricsystem.desk.adapter.DeskMenuAdapter;
+import com.tlh.electricsystem.desk.adapter.DeskTaskAdapter;
 import com.tlh.electricsystem.desk.databinding.FragmentDeskBinding;
 import com.tlh.electricsystem.desk.viewModel.DeskViewModel;
 
@@ -50,5 +51,13 @@ public class DeskFragment extends BaseFragment<FragmentDeskBinding,DeskViewModel
         menuList.addAll(Arrays.asList(menuNames));
         DeskMenuAdapter deskMenuAdapter = new DeskMenuAdapter(m_Activity,menuList);
         RecyclerViewHelper.initRecyclerViewG(m_Activity,mBinding.rvDeskMenu,deskMenuAdapter,menuList.size());
+
+        List<String> taskList = new ArrayList<>();
+        taskList.add("");
+        taskList.add("");
+        taskList.add("");
+        DeskTaskAdapter deskTaskAdapter = new DeskTaskAdapter(m_Activity,taskList);
+        mBinding.rvDeskTask.setNestedScrollingEnabled(false);
+        RecyclerViewHelper.initRecyclerViewV(m_Activity,mBinding.rvDeskTask,deskTaskAdapter);
     }
 }

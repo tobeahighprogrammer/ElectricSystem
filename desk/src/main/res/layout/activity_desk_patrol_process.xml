@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_background_grey">
+
+        <include
+            layout="@layout/layout_title_bar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_item_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <com.tlh.electricsystem.base.widget.progressbar.StateProgressBar
+                    android:id="@+id/spb_patrol_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:spb_currentStateNumber="two"
+                    app:spb_maxStateNumber="three"
+                    app:spb_stateBackgroundColor="#E0E0D8"
+                    app:spb_stateForegroundColor="#009D85"
+                    app:spb_stateDescriptionSize="10sp"
+                    app:spb_stateTextSize="10sp"
+                    app:spb_stateNumberBackgroundColor="@color/color_text_black"
+                    app:spb_stateNumberForegroundColor="@android:color/white"
+                    app:spb_currentStateDescriptionColor="@color/color_text_grey"
+                    app:spb_stateDescriptionColor="@color/color_text_grey"
+                    app:spb_animateToCurrentProgressState="true"
+                    app:spb_checkStateCompleted="true"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

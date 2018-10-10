@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DeskMainActivity">
-        </activity>
+
+        <activity android:name=".DeskMainActivity"/>
+        <activity android:name=".activity.DeskPatrolPlanActivity"/>
+        <activity android:name=".activity.DeskPatrolContentActivity"/>
+        <activity android:name=".activity.DeskPatrolCompleteActivity"/>
+        <activity android:name=".activity.DeskPatrolProcessActivity"/>
+
     </application>
 
 </manifest>

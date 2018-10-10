@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 申请进度的自定义view-->
+    <declare-styleable name="AuditProgressView">
+        <!--当前步骤是否完成 -->
+        <attr name="apv_isCurrentComplete" format="boolean" />
+        <!--下一个步骤是否完成 -->
+        <attr name="apv_isNextComplete" format="boolean" />
+        <!--是不是第一个步骤 -->
+        <attr name="apv_isFirstStep" format="boolean" />
+        <!--是不是最后一个步骤 -->
+        <attr name="apv_isLastStep" format="boolean" />
+        <!--共有几个步骤 -->
+        <attr name="apv_stepCount" format="integer" />
+        <!--步骤提示 -->
+        <attr name="apv_text" format="string|reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="StateProgressBar">
+
+        <attr name="spb_stateBackgroundColor" format="color" />
+        <attr name="spb_stateForegroundColor" format="color" />
+
+        <attr name="spb_stateNumberBackgroundColor" format="color" />
+        <attr name="spb_stateNumberForegroundColor" format="color" />
+
+        <attr name="spb_currentStateDescriptionColor" format="color" />
+        <attr name="spb_stateDescriptionColor" format="color" />
+
+        <attr name="spb_stateSize" format="dimension" />
+
+        <attr name="spb_stateTextSize" format="dimension" />
+
+        <attr name="spb_stateDescriptionSize" format="dimension" />
+
+        <attr name="spb_stateLineThickness" format="dimension" />
+
+        <attr name="spb_checkStateCompleted" format="boolean" />
+
+        <attr name="spb_stateNumberIsDescending" format="boolean" />
+
+        <attr name="spb_animateToCurrentProgressState" format="boolean" />
+
+        <attr name="spb_enableAllStatesCompleted" format="boolean" />
+
+        <attr name="spb_descriptionTopSpaceDecrementer" format="dimension" />
+
+        <attr name="spb_descriptionTopSpaceIncrementer" format="dimension" />
+
+        <attr name="spb_animationDuration" format="integer" />
+
+        <attr name="spb_animationStartDelay" format="integer" />
+
+        <attr name="spb_justifyMultilineDescription" format="boolean" />
+
+        <attr name="spb_descriptionLinesSpacing" format="dimension" />
+
+        <attr name="spb_maxDescriptionLines" format="integer" />
+
+
+        <attr name="spb_currentStateNumber" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+            <enum name="five" value="5" />
+        </attr>
+
+
+        <attr name="spb_maxStateNumber" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+            <enum name="five" value="5" />
+        </attr>
+
+    </declare-styleable>
+</resources>

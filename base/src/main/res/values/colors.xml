@@ -28,4 +28,11 @@
 
     <color name="text_bg">#E0E0D8</color>
 
+
+    <!--stateProgressBar-->
+    <color name="background_color">#F2000000</color>
+    <color name="foreground_color">#b42379</color>
+    <color name="background_text_color">#808080</color>
+    <color name="foreground_text_color">#eeeeee</color>
+
 </resources>
