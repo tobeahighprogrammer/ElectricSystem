@@ -30,7 +30,7 @@
                     android:layout_centerVertical="true"
                     android:paddingLeft="16dp"
                     android:text="设备名称"
-                    android:textSize="16dp" />
+                    android:textSize="14dp" />
 
                 <TextView
                     android:id="@+id/tv_device_type"
@@ -39,6 +39,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:paddingRight="8dp"
+                    android:textSize="10dp"
                     android:text="电站类型" />
 
                 <TextView
@@ -47,13 +48,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="8dp"
                     android:layout_toLeftOf="@+id/tv_device_type"
+                    android:textSize="10dp"
                     android:text="200V" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="#fff" />
 
             </RelativeLayout>
 

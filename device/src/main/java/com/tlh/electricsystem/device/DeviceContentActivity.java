@@ -42,7 +42,6 @@ public class DeviceContentActivity extends BaseActivity<ActivityDeviceContentBin
 
     @Override
     public void initData() {
-        super.initData();
         mFragments = new ArrayList<>();
         mDefectFragment = new DefectFragment();
         mHiddenFragment = new HiddenFragment();
@@ -59,6 +58,6 @@ public class DeviceContentActivity extends BaseActivity<ActivityDeviceContentBin
         mFragments.add( mFaultFragment ) ;
         mFragments.add(mDynamicFragment) ;
         //设置tab
-        mBinding.tabDeviceContent.setViewPager(mBinding.vpDeviceContent,titles ,this ,mFragments);
+        mBinding.tabDeviceContent.setViewPager( mBinding.vpDeviceContent , titles ,this , mFragments );
     }
 }
