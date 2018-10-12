@@ -9,13 +9,16 @@
         android:background="@color/color_background_grey">
 
         <include
+            android:id="@+id/include_patrol_content_title"
             layout="@layout/layout_title_bar"/>
 
         <android.support.design.widget.TabLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/tl_patrol_content"
+            android:layout_width="match_parent"
             android:layout_height="46dp"
+            android:background="@color/color_theme_green"
             app:tabMode="scrollable"
-            app:tabIndicatorHeight="1dp"
+            app:tabIndicatorHeight="2dp"
             app:tabIndicatorColor="@color/color_text_yellow"
             app:tabSelectedTextColor="@android:color/white"
             app:tabTextColor="@android:color/white"
@@ -23,6 +26,11 @@
 
         </android.support.design.widget.TabLayout>
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_patrol_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v4.view.ViewPager>
 
     </LinearLayout>
 </layout>

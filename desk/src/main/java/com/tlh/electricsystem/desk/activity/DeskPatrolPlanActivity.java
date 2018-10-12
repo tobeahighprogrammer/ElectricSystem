@@ -1,6 +1,8 @@
 package com.tlh.electricsystem.desk.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.base.base.BaseViewModel;
@@ -30,6 +32,12 @@ public class DeskPatrolPlanActivity extends BaseActivity<ActivityDeskPatrolPlanB
     @Override
     public void initData() {
         super.initData();
+        mBinding.includePatrolPlanItem4.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DeskPatrolPlanActivity.this,DeskPatrolContentActivity.class));
+            }
+        });
     }
 
 }

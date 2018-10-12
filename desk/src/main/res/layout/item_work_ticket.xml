@@ -4,12 +4,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/shape_shadow_frame"
-        android:gravity="center_horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground">
+        android:gravity="center_horizontal">
 
         <include
             android:id="@+id/include_patrol_plan"
@@ -37,23 +32,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingTop="17dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="15dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="45dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:textColor="@color/color_text_grey"
                         android:textSize="10sp"
-                        android:text="编制单位：编制单位名称"/>
+                        android:text="负责人"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/color_text_yellow"
+                        android:textSize="14sp"
+                        android:text="人员姓名"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
                         android:textColor="@color/color_text_grey"
                         android:textSize="10sp"
-                        android:text="编制人：名称"/>
+                        android:text="班组"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/color_text_yellow"
+                        android:textSize="14sp"
+                        android:text="班组名称"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -70,7 +90,7 @@
                         android:layout_weight="1"
                         android:textColor="@color/color_text_grey"
                         android:textSize="10sp"
-                        android:text="编制时间：2018/09/21"/>
+                        android:text=""/>
 
                     <TextView
                         android:layout_width="wrap_content"

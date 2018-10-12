@@ -92,27 +92,32 @@
                 </android.support.v7.widget.CardView>
 
                 <include
+                    android:id="@+id/include_patrol_plan_item1"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     layout="@layout/item_common_patrol_plan"
                     android:layout_marginTop="10dp"/>
 
                 <include
+                    android:id="@+id/include_patrol_plan_item2"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     layout="@layout/item_common_patrol_plan" />
 
                 <include
+                    android:id="@+id/include_patrol_plan_item3"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     layout="@layout/item_common_patrol_plan" />
 
                 <include
+                    android:id="@+id/include_patrol_plan_item4"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     layout="@layout/item_common_patrol_plan"
                     android:layout_marginTop="10dp"/>
                 <include
+                    android:id="@+id/include_patrol_plan_item5"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     layout="@layout/item_common_patrol_plan" />

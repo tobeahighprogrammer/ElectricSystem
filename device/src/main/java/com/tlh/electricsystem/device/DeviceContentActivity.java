@@ -2,7 +2,10 @@ package com.tlh.electricsystem.device;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.tlh.electricsystem.base.base.BaseActivity;
+import com.tlh.electricsystem.base.common.ARouterPath;
 import com.tlh.electricsystem.device.databinding.ActivityDeviceContentBinding;
 import com.tlh.electricsystem.device.fragment.DefectFragment;
 import com.tlh.electricsystem.device.fragment.DynamicFragment;
@@ -13,7 +16,7 @@ import com.tlh.electricsystem.device.fragment.TaskFragment;
 import com.tlh.electricsystem.device.viewModel.DeviceContentViewModel;
 
 import java.util.ArrayList;
-
+@Route(path = ARouterPath.DeviceContentActivity)
 public class DeviceContentActivity extends BaseActivity<ActivityDeviceContentBinding, DeviceContentViewModel> {
     private ArrayList<Fragment>  mFragments; // 承装Fragment 集合
     private String[] titles = { "缺陷" ,"隐患" ,"任务" ,"台账" ,"故障" , "动态" }; //设置指示栏名称
