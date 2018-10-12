@@ -4,7 +4,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@android:color/white"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <ImageView
             android:id="@+id/iv_desk_menu"

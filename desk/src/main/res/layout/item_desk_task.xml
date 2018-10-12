@@ -4,7 +4,9 @@
         android:layout_height="wrap_content"
         android:minHeight="110dp"
         android:orientation="horizontal"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <RelativeLayout
             android:layout_width="0dp"

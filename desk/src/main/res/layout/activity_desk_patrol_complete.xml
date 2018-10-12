@@ -8,6 +8,9 @@
         android:background="@color/color_background_grey">
 
         <include
+            android:id="@+id/include_patrol_complete_title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
             layout="@layout/layout_title_bar"/>
 
         <RelativeLayout

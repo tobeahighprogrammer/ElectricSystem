@@ -103,7 +103,8 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="21dp"
                             android:layout_marginBottom="23dp"
-                            android:background="@color/color_theme_green"
+                            android:background="@drawable/shape_button_green"
+                            android:gravity="center"
                             android:textColor="@android:color/white"
                             android:textSize="13sp"
                             android:text="查看全部"/>

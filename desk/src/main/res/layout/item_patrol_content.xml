@@ -3,7 +3,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@android:color/white"
+        android:background="@drawable/shape_shadow_frame"
         android:gravity="center_horizontal">
 
         <include
@@ -21,9 +21,7 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,6 +91,7 @@
                     android:layout_marginTop="21dp"/>
 
                 <LinearLayout
+                    android:id="@+id/ll_patrol_content_type"
                     android:layout_width="match_parent"
                     android:layout_height="51dp"
                     android:orientation="horizontal"

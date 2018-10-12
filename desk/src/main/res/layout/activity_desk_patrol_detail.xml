@@ -2,14 +2,20 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <!--<variable-->
+            <!--name="DeviceContentViewModel"-->
+            <!--type="com.tlh.electricsystem.device.viewModel.DeviceContentViewModel" />-->
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/color_background_grey">
+        android:background="@color/color_background_grey"
+        android:orientation="vertical">
 
         <include
-            android:id="@+id/include_patrol_progress_title"
+            android:id="@+id/include_patrol_detail_title"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             layout="@layout/layout_title_bar"/>
@@ -21,39 +27,41 @@
             android:scrollbars="none">
 
             <LinearLayout
-                android:id="@+id/ll_item_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                <com.tlh.electricsystem.base.widget.progressbar.StateProgressBar
-                    android:id="@+id/spb_patrol_progress"
+                <include
+                    android:id="@+id/include_patrol_plan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="14dp"
-                    app:spb_currentStateNumber="two"
-                    app:spb_maxStateNumber="three"
-                    app:spb_stateBackgroundColor="#E0E0D8"
-                    app:spb_stateForegroundColor="#009D85"
-                    app:spb_stateDescriptionSize="10sp"
-                    app:spb_stateTextSize="10sp"
-                    app:spb_stateNumberBackgroundColor="@color/color_text_black"
-                    app:spb_stateNumberForegroundColor="@android:color/white"
-                    app:spb_currentStateDescriptionColor="@color/color_text_grey"
-                    app:spb_stateDescriptionColor="@color/color_text_grey"
-                    app:spb_animateToCurrentProgressState="true"
-                    app:spb_checkStateCompleted="true"/>
+                    layout="@layout/item_patrol_content"/>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/shape_divider_green"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_patrol_detail_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </ScrollView>
-        
+
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"

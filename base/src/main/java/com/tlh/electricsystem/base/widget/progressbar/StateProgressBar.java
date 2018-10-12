@@ -1187,7 +1187,7 @@ public class StateProgressBar extends View {
             isChecked = isCheckIconUsed(mCurrentStateNumber, i);
 
             if (mCheckStateCompleted && isChecked) {
-                canvas.drawText("", xPos, yPos, innerPaintType);
+                canvas.drawText("1", xPos, yPos, innerPaintType);
             } else {
                 if (mIsStateNumberDescending)
                     canvas.drawText(String.valueOf(noOfCircles - i), xPos, yPos, innerPaintType);
