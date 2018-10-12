@@ -15,6 +15,9 @@
         android:orientation="vertical">
 
         <include
+            android:id="@+id/include_patrol_plan_title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
             layout="@layout/layout_title_bar"/>
 
         <ScrollView

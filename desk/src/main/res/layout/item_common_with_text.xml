@@ -12,7 +12,7 @@
         android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
-            android:id="@+id/tv_common_next_name"
+            android:id="@+id/tv_common_text_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -21,12 +21,12 @@
             android:text="巡视计划名称"/>
 
         <TextView
-            android:id="@+id/tv_common_next_value"
+            android:id="@+id/tv_common_text_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="15dp"
             android:textSize="12sp"
-            android:textColor="#C7002F"
+            android:textColor="@color/color_text_grey"
             android:text="未填写"/>
 
     </LinearLayout>

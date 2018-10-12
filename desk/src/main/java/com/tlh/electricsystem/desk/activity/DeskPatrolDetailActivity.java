@@ -6,26 +6,27 @@ import android.widget.LinearLayout;
 import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.base.base.BaseViewModel;
 import com.tlh.electricsystem.desk.R;
-import com.tlh.electricsystem.desk.databinding.ActivityDeskPatrolProcessBinding;
+import com.tlh.electricsystem.desk.databinding.ActivityDeskPatrolDetailBinding;
 import com.tlh.electricsystem.desk.widget.CommonDeviceNameView;
 import com.tlh.electricsystem.desk.widget.CommonWithCheckView;
+import com.tlh.electricsystem.desk.widget.CommonWithListView;
 import com.tlh.electricsystem.desk.widget.CommonWithNextView;
 import com.tlh.electricsystem.desk.widget.CommonWithSelectorView;
 import com.tlh.electricsystem.desk.widget.CommonWithTextView;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 /**
- * 巡视流程页面
+ * 巡视作业详情页面
  */
-public class DeskPatrolProcessActivity extends BaseActivity<ActivityDeskPatrolProcessBinding,BaseViewModel> {
+public class DeskPatrolDetailActivity extends BaseActivity<ActivityDeskPatrolDetailBinding,BaseViewModel> {
 
     @Override
     public int initContentView(Bundle savedInstanceState) {
-        return R.layout.activity_desk_patrol_process;
+        return R.layout.activity_desk_patrol_detail;
     }
 
     @Override
@@ -41,48 +42,44 @@ public class DeskPatrolProcessActivity extends BaseActivity<ActivityDeskPatrolPr
     @Override
     public void initData() {
         super.initData();
-
-        String[] descriptionData = {"提交基本信息", "提交数据抄录", "提交巡视结果"};
-        mBinding.spbPatrolProgress.setStateDescriptionData(descriptionData);
-
-        addChildView(testJson,mBinding.llItemContainer);
+        addChildView(testJson,mBinding.llPatrolDetailContainer);
     }
 
     private static String testJson = " {" +
-            "\"title\": { " +
-            "\"name\": \"设备名称\"," +
-            "\"value\":\"220V\"," +
-            "\"type\":\"deviceTitle\"}," +
-
-            "\"result\": { " +
-            "\"name\": \"巡视结果\"," +
+            "\"leader\": { " +
+            "\"name\": \"负责人\"," +
             "\"value\":\"\"," +
-            "\"type\":\"next\"},"+
-
-            "\"content\": { " +
-            "\"name\": \"巡视内容\"," +
-            "\"value\":\"\"," +
-            "\"type\":\"next\"},"+
+            "\"type\":\"selector\"}," +
 
             "\"startTime\": { " +
-            "\"name\": \"巡视开始时间\"," +
+            "\"name\": \"实际开始时间\"," +
             "\"value\":\"\"," +
             "\"type\":\"selector\"},"+
 
             "\"endTime\": { " +
-            "\"name\": \"巡视结束时间\"," +
+            "\"name\": \"实际结束时间\"," +
             "\"value\":\"\"," +
             "\"type\":\"selector\"},"+
 
-            "\"isFault\": { " +
-            "\"name\": \"存在缺陷\"," +
+            "\"team\": { " +
+            "\"name\": \"工作成员\"," +
+            "\"value\":\"4人\"," +
+            "\"type\":\"list\"},"+
+
+            "\"isDelay\": { " +
+            "\"name\": \"是否超期\"," +
             "\"value\":\"false\"," +
             "\"type\":\"check\"},"+
 
-            "\"isTrouble\": { " +
-            "\"name\": \"存在隐患\"," +
-            "\"value\":\"true\"," +
-            "\"type\":\"check\"}"+
+            "\"reason\": { " +
+            "\"name\": \"超期原因\"," +
+            "\"value\":\"\"," +
+            "\"type\":\"next\"},"+
+
+            "\"prompt\": { " +
+            "\"name\": \"备注\"," +
+            "\"value\":\"\"," +
+            "\"type\":\"next\"}"+
             " }";
 
     private void addChildView(String testJson, LinearLayout radioGroup){
@@ -123,6 +120,13 @@ public class DeskPatrolProcessActivity extends BaseActivity<ActivityDeskPatrolPr
                             commonWithSelectorView.setName(childJsonObject.getString("name"));
                             commonWithSelectorView.setValue(childJsonObject.getString("value"));
                             radioGroup.addView(commonWithSelectorView);
+                            break;
+                        case "list":
+                            CommonWithListView commonWithListView = new CommonWithListView(this);
+                            commonWithListView.setName(childJsonObject.getString("name"));
+                            commonWithListView.setValue(childJsonObject.getString("value"));
+                            commonWithListView.setList(Arrays.asList("Michael","Jack","Rose","Peter"));
+                            radioGroup.addView(commonWithListView);
                             break;
                         default:
                             break;

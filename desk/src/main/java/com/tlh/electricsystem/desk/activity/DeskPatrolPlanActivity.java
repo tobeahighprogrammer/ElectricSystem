@@ -26,4 +26,10 @@ public class DeskPatrolPlanActivity extends BaseActivity<ActivityDeskPatrolPlanB
     public BaseViewModel initViewModel() {
         return new BaseViewModel(this);
     }
+
+    @Override
+    public void initData() {
+        super.initData();
+    }
+
 }

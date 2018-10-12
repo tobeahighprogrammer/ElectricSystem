@@ -7,9 +7,12 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/shape_shadow_frame">
+        android:background="@drawable/shape_shadow_frame"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
+            android:id="@+id/tv_common_check_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -17,7 +20,8 @@
             android:textColor="@color/color_text_black"
             android:text="巡视计划名称"/>
 
-        <CheckBox
+        <Switch
+            android:id="@+id/tv_common_check_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"

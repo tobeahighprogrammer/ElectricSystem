@@ -15,15 +15,16 @@ import com.tlh.electricsystem.desk.activity.DeskPatrolContentActivity;
 import com.tlh.electricsystem.desk.activity.DeskPatrolDetailActivity;
 import com.tlh.electricsystem.desk.activity.DeskPatrolProcessActivity;
 import com.tlh.electricsystem.desk.databinding.ItemDeskMenuBinding;
+import com.tlh.electricsystem.desk.databinding.ItemPatrolTeamMemberBinding;
 
 import java.util.List;
 
-public class DeskMenuAdapter extends RecyclerView.Adapter<DeskMenuAdapter.BindViewHolder> {
+public class TeamMemberAdapter extends RecyclerView.Adapter<TeamMemberAdapter.BindViewHolder> {
 
     private Context context;
     private List<String> dataList;
 
-    public DeskMenuAdapter(Context context,List<String> dataList){
+    public TeamMemberAdapter(Context context, List<String> dataList){
         this.context = context;
         this.dataList = dataList;
     }
@@ -32,31 +33,21 @@ public class DeskMenuAdapter extends RecyclerView.Adapter<DeskMenuAdapter.BindVi
     @NonNull
     @Override
     public BindViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ViewDataBinding binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.item_desk_menu,parent,false);
+        ViewDataBinding binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.item_patrol_team_member,parent,false);
         return new BindViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull BindViewHolder holder, final int position) {
-        ItemDeskMenuBinding binding = (ItemDeskMenuBinding)holder.getBinding();
+        ItemPatrolTeamMemberBinding binding = (ItemPatrolTeamMemberBinding)holder.getBinding();
         String name = dataList.get(position);
-        binding.tvDeskMenu.setText(name);
-        binding.ivDeskMenu.setImageResource(R.mipmap.ic_launcher);
+        binding.tvTeamMemberTitle.setText(name.substring(0,1));
+        binding.tvTeamMemberName.setText(name);
 
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(position == 0){
-                    context.startActivity(new Intent(context, DeskPatrolProcessActivity.class));
-                }
 
-                if(position == 1){
-                    context.startActivity(new Intent(context, DeskPatrolDetailActivity.class));
-                }
-
-                if(position == 2){
-                    context.startActivity(new Intent(context, DeskPatrolContentActivity.class));
-                }
             }
         });
 
