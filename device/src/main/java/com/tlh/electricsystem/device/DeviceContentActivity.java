@@ -56,8 +56,10 @@ public class DeviceContentActivity extends BaseActivity<ActivityDeviceContentBin
         mFragments.add( mTaskFragment ) ;
         mFragments.add( mLedgerFragment ) ;
         mFragments.add( mFaultFragment ) ;
-        mFragments.add(mDynamicFragment) ;
+        mFragments.add( mDynamicFragment ) ;
         //设置tab
         mBinding.tabDeviceContent.setViewPager( mBinding.vpDeviceContent , titles ,this , mFragments );
+        mBinding.tabDeviceContent.showMsg(3,3);
+        mBinding.tabDeviceContent.setMsgMargin(3 , 15 , 10 );
     }
 }

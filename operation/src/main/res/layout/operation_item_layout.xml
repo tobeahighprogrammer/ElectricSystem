@@ -3,25 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
     <TextView
         android:id="@+id/tv_operation_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="工作"
-        android:textStyle="bold"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/color_text_black" />
+        android:text="工作"
+        android:textColor="@color/color_text_black"
+        android:textStyle="bold" />
 
     <com.tlh.electricsystem.operation.MyGridView
         android:id="@+id/mGridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="4"
         android:layout_margin="10dp"
-        android:stretchMode="columnWidth"
+        android:background="@drawable/grid_shape"
         android:horizontalSpacing="0.5dp"
-        android:verticalSpacing="0.5dp"
-        android:background="@drawable/grid_shape" >
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0.5dp">
 
     </com.tlh.electricsystem.operation.MyGridView>
 
