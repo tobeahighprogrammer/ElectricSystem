@@ -59,12 +59,12 @@ public class DeviceInfoFragment extends BaseFragment<FragmentDeviceInfoBinding ,
         mDeviceInfoBeans.add(new DeviceInfoBean());
         mDeviceInfoBeans.add(new DeviceInfoBean());
         mDeviceInfoBeans.add(new DeviceInfoBean());
-        mDeviceInfoAdapter = new DeviceInfoAdapter( R.layout.device_item , mDeviceInfoBeans );
-        RecyclerViewHelper.initRecyclerViewV( m_Activity , mBinding.deviceInfoRecyclerView , mDeviceInfoAdapter );
+        mDeviceInfoAdapter = new DeviceInfoAdapter( R.layout.device_item , mDeviceInfoBeans ) ;
+        RecyclerViewHelper.initRecyclerViewV( m_Activity , mBinding.deviceInfoRecyclerView , mDeviceInfoAdapter ) ;
     }
 
     @Override
     public void initListener() {
-        mViewModel.addOnItemTouchListener( mBinding.deviceInfoRecyclerView );
+        mViewModel.addOnItemTouchListener( mBinding.deviceInfoRecyclerView ) ;
     }
 }

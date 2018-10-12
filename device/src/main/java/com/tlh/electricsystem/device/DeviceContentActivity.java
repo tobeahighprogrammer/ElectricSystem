@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.device.databinding.ActivityDeviceContentBinding;
 import com.tlh.electricsystem.device.fragment.DefectFragment;
+import com.tlh.electricsystem.device.fragment.DynamicFragment;
 import com.tlh.electricsystem.device.fragment.FaultFragment;
 import com.tlh.electricsystem.device.fragment.HiddenFragment;
 import com.tlh.electricsystem.device.fragment.LedgerFragment;
@@ -15,13 +16,14 @@ import java.util.ArrayList;
 
 public class DeviceContentActivity extends BaseActivity<ActivityDeviceContentBinding, DeviceContentViewModel> {
     private ArrayList<Fragment>  mFragments; // 承装Fragment 集合
-    private String[] titles = { "缺陷" ,"隐患" ,"任务" ,"台账" ,"故障" }; //设置指示栏名称
+    private String[] titles = { "缺陷" ,"隐患" ,"任务" ,"台账" ,"故障" , "动态" }; //设置指示栏名称
     //子页面
     private DefectFragment mDefectFragment; //缺陷页面
     private HiddenFragment mHiddenFragment; //隐患页面
     private TaskFragment mTaskFragment; //任务页面
     private LedgerFragment mLedgerFragment ; //台账页面
     private FaultFragment mFaultFragment ; //故障页面
+    private DynamicFragment mDynamicFragment; //动态页面
 
     @Override
     public int initContentView( Bundle savedInstanceState ) {
@@ -47,14 +49,16 @@ public class DeviceContentActivity extends BaseActivity<ActivityDeviceContentBin
         mTaskFragment = new TaskFragment();
         mLedgerFragment = new LedgerFragment();
         mFaultFragment = new FaultFragment();
+        mDynamicFragment = new DynamicFragment();
+
         //添加到数据集合
-        mFragments.add(mDefectFragment);
-        mFragments.add(mHiddenFragment);
-        mFragments.add(mTaskFragment);
-        mFragments.add(mLedgerFragment);
-        mFragments.add(mFaultFragment);
+        mFragments.add( mDefectFragment ) ;
+        mFragments.add( mHiddenFragment ) ;
+        mFragments.add( mTaskFragment ) ;
+        mFragments.add( mLedgerFragment ) ;
+        mFragments.add( mFaultFragment ) ;
+        mFragments.add(mDynamicFragment) ;
         //设置tab
         mBinding.tabDeviceContent.setViewPager(mBinding.vpDeviceContent,titles ,this ,mFragments);
-        mFragments.clear(); //清空数据释放内存
     }
 }

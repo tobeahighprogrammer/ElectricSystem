@@ -3,14 +3,19 @@ package com.tlh.electricsystem.device.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.tlh.electricsystem.base.base.BaseFragment;
 import com.tlh.electricsystem.base.utils.RecyclerViewHelper;
 import com.tlh.electricsystem.device.BR;
 import com.tlh.electricsystem.device.R;
 import com.tlh.electricsystem.device.adapter.IntervalAdapter;
+import com.tlh.electricsystem.device.bean.DeviceInfoBean;
 import com.tlh.electricsystem.device.bean.IntervalBean;
 import com.tlh.electricsystem.device.databinding.FragmentIntervalBinding;
 import com.tlh.electricsystem.device.viewModel.IntervalViewModel;
@@ -52,5 +57,10 @@ public class IntervalFragment extends BaseFragment<FragmentIntervalBinding , Int
         mIntervalBeans.add(new IntervalBean());
         mIntervalAdapter = new IntervalAdapter( R.layout.device_interval_item , mIntervalBeans ) ;
         RecyclerViewHelper.initRecyclerViewV( m_Activity , mBinding.intervalInfoRecyclerView , mIntervalAdapter ) ;
+    }
+
+    @Override
+    public void initListener() {
+        mViewModel.addOnItemTouchListener(mBinding.intervalInfoRecyclerView);
     }
 }

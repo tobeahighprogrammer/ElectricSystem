@@ -48,6 +48,12 @@ public class TaskFragment extends BaseFragment<FragmentDefectBinding , BaseViewM
     public void initData() {
         super.initData();
         mDeviceTaskBeans = new ArrayList<>();
+        mDeviceTaskBeans.add(new DeviceTaskBean());
+        mDeviceTaskBeans.add(new DeviceTaskBean());
+        mDeviceTaskBeans.add(new DeviceTaskBean());
+        mDeviceTaskBeans.add(new DeviceTaskBean());
+        mDeviceTaskBeans.add(new DeviceTaskBean());
+        mDeviceTaskBeans.add(new DeviceTaskBean());
         mDeviceTaskAdapter = new DeviceTaskAdapter( R.layout.device_task_item , mDeviceTaskBeans);
         RecyclerViewHelper.initRecyclerViewV(m_Activity , mBinding.relDevice, mDeviceTaskAdapter);
     }

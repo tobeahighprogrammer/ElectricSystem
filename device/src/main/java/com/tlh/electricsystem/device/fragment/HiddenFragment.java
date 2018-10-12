@@ -48,7 +48,13 @@ public class HiddenFragment extends BaseFragment<FragmentDefectBinding , BaseVie
     public void initData() {
         super.initData();
         mDefectBeans =  new ArrayList<>();
+        mDefectBeans.add(new DefectBean());
+        mDefectBeans.add(new DefectBean());
+        mDefectBeans.add(new DefectBean());
+        mDefectBeans.add(new DefectBean());
+        mDefectBeans.add(new DefectBean());
+        mDefectBeans.add(new DefectBean());
         mDefectAdapter = new DefectAdapter(R.layout.defect_device_item , mDefectBeans);
-        RecyclerViewHelper.initRecyclerViewV(m_Activity ,mBinding.relDevice,mDefectAdapter);
+        RecyclerViewHelper.initRecyclerViewV(m_Activity , mBinding.relDevice , mDefectAdapter);
     }
 }

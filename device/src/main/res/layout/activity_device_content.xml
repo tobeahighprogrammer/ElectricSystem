@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="DeviceContentViewModel"
             type="com.tlh.electricsystem.device.viewModel.DeviceContentViewModel" />
     </data>
 
-    <LinearLayout
+    <android.support.v4.widget.DrawerLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@color/white">
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/card_shape_all">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,29 +56,37 @@
                     android:background="#fff" />
 
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
-        <!-- 指示器 -->
-        <com.flyco.tablayout.SlidingTabLayout
-            android:id="@+id/tab_device_content"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
+            <!-- 指示器 -->
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tab_device_content"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                app:tl_indicator_color="#333333"
+                app:tl_indicator_gravity="BOTTOM"
+                app:tl_indicator_height="2dp"
+                app:tl_indicator_width="45dp"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="#333333"
+                app:tl_textUnselectColor="#333333" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_device_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
             android:background="@color/white"
-            app:tl_indicator_color="#333333"
-            app:tl_indicator_gravity="BOTTOM"
-            app:tl_indicator_height="2dp"
-            app:tl_indicator_width="67dp"
-            app:tl_tab_space_equal="true"
-            app:tl_textSelectColor="#333333"
-            app:tl_textUnselectColor="#333333" />
+            app:menu="@menu/activity_main_drawer" />
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/vp_device_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </android.support.v4.view.ViewPager>
-
-    </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
 
 </layout>

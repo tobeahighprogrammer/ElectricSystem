@@ -1,136 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="171dp"
     android:layout_margin="10dp"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="10dp">
+    android:background="@drawable/card_shape_all"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_defect_state"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:text="缺陷状态" />
 
-            <TextView
-                android:id="@+id/tv_defect_state"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginBottom="14dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="16dp"
-                android:text="缺陷状态" />
-
-            <TextView
-                android:id="@+id/tv_defect_nature"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginBottom="14dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_toRightOf="@+id/tv_defect_state"
-                android:text="缺陷性质" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginBottom="14dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_toRightOf="@+id/tv_defect_nature"
-                android:text="缺陷状态" />
-
-            <TextView
-                android:id="@+id/tv_defect_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:text="XXX"
-                android:textColor="@color/color_text_yellow" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/tv_defect_name"
-                android:text="处理人 :  " />
-
-
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_defect_nature"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/tv_defect_state"
+            android:text="缺陷性质" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
+            android:layout_height="20dp"
+            android:layout_marginBottom="14dp"
             android:layout_marginLeft="10dp"
-            android:text="缺陷编码：30001350058"
-            />
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/tv_defect_nature"
+            android:text="缺陷状态" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_defect_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="XXX"
+            android:textColor="@color/color_text_yellow" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="登记人:  " />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_defect_name"
+            android:text="处理人 :  " />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="XXX"
-                android:textColor="@color/color_text_yellow" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="登记时间：2018年9月10日" />
+    </RelativeLayout>
 
-        </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="缺陷编码：30001350058" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:text="距离超期时间：2018年9月10日" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登记人:  " />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="是否消缺 : " />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXX"
+            android:textColor="@color/color_text_yellow" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="是"
-                android:textColor="@color/color_theme_green" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="登记时间：2018年9月10日" />
 
-        </LinearLayout>
     </LinearLayout>
-</android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="距离超期时间：2018年9月10日" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否消缺 : " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="是"
+            android:textColor="@color/color_theme_green" />
+
+    </LinearLayout>
+</LinearLayout>
