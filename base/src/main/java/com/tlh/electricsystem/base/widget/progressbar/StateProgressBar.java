@@ -961,7 +961,7 @@ public class StateProgressBar extends View {
             startX = startCenterX + (mStateRadius * 0.75f);
             stopX = endCenterX - (mStateRadius * 0.75f);
 
-            canvas.drawLine(startX, mCellHeight / 2, stopX, mCellHeight / 2, paint);
+            canvas.drawLine(0, mCellHeight / 2, stopX, mCellHeight / 2, paint);
 
         }
 
