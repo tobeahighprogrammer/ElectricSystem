@@ -12,7 +12,7 @@
         android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
-            android:id="@+id/tv_common_next_name"
+            android:id="@+id/tv_common_leader_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -28,7 +28,7 @@
             android:gravity="center_vertical">
 
             <TextView
-                android:id="@+id/tv_team_member_title"
+                android:id="@+id/tv_common_leader_title"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:background="@drawable/shape_team_member_title"
@@ -37,7 +37,7 @@
                 android:textSize="16sp"/>
 
             <TextView
-                android:id="@+id/tv_team_member_name"
+                android:id="@+id/tv_common_leader_member"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"

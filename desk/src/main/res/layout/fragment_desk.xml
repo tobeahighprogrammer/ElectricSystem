@@ -13,9 +13,6 @@
         android:orientation="vertical"
         android:background="@color/color_background_grey">
 
-       <include
-           layout="@layout/layout_title_bar"/>
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -11,14 +11,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_background_grey"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/include_patrol_plan_title"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            layout="@layout/layout_title_bar"/>
+            android:layout_height="wrap_content"
+            android:background="@color/color_theme_green"
+            app:subtitle="巡视计划"
+            app:subtitleTextColor="@color/white"
+            app:navigationIcon="@mipmap/ic_launcher">
+
+        </android.support.v7.widget.Toolbar>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -31,96 +35,142 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <include
-                    android:id="@+id/include_patrol_plan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    layout="@layout/layout_patrol_plan_top"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/shape_divider_green"/>
-
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="59dp">
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <RelativeLayout
-                            android:layout_width="0dp"
+                        <include
+                            android:id="@+id/include_patrol_plan"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            layout="@layout/layout_patrol_plan_top"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layerType="software"
+                            android:background="@drawable/shape_dash_line"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="59dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:drawablePadding="10dp"
-                                android:textSize="14sp"
-                                android:textColor="@color/color_text_yellow"
-                                android:text="巡视班组"/>
+                                android:layout_weight="1">
 
-                        </RelativeLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:drawablePadding="10dp"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/color_text_yellow"
+                                    android:text="巡视班组"/>
 
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            </RelativeLayout>
 
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <RelativeLayout
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:drawablePadding="10dp"
-                                android:layout_marginTop="8dp"
-                                android:textSize="14sp"
-                                android:textColor="@color/color_text_black"
-                                android:text="计划状态"/>
+                                android:layout_weight="1">
 
-                        </RelativeLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:drawablePadding="10dp"
+                                    android:layout_marginTop="8dp"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/color_text_black"
+                                    android:text="计划状态"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
 
-                <include
-                    android:id="@+id/include_patrol_plan_item1"
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    layout="@layout/item_common_patrol_plan"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                <include
-                    android:id="@+id/include_patrol_plan_item2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    layout="@layout/item_common_patrol_plan" />
+                        <include
+                            android:id="@+id/include_patrol_plan_item1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            layout="@layout/item_common_patrol_plan"/>
 
-                <include
-                    android:id="@+id/include_patrol_plan_item3"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    layout="@layout/item_common_patrol_plan" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/color_divider_grey"/>
 
-                <include
-                    android:id="@+id/include_patrol_plan_item4"
+                        <include
+                            android:id="@+id/include_patrol_plan_item2"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            layout="@layout/item_common_patrol_plan" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/color_divider_grey"/>
+
+                        <include
+                            android:id="@+id/include_patrol_plan_item3"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            layout="@layout/item_common_patrol_plan" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    layout="@layout/item_common_patrol_plan"
-                    android:layout_marginTop="10dp"/>
-                <include
-                    android:id="@+id/include_patrol_plan_item5"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    layout="@layout/item_common_patrol_plan" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/include_patrol_plan_item4"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            layout="@layout/item_common_patrol_plan"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/color_divider_grey"/>
+
+                        <include
+                            android:id="@+id/include_patrol_plan_item5"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            layout="@layout/item_common_patrol_plan" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
 

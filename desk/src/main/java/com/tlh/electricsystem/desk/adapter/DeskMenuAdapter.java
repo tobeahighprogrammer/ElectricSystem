@@ -14,6 +14,8 @@ import com.tlh.electricsystem.desk.R;
 import com.tlh.electricsystem.desk.activity.DeskPatrolContentActivity;
 import com.tlh.electricsystem.desk.activity.DeskPatrolDetailActivity;
 import com.tlh.electricsystem.desk.activity.DeskPatrolProcessActivity;
+import com.tlh.electricsystem.desk.activity.OperationTicketListActivity;
+import com.tlh.electricsystem.desk.activity.WorkTicketListActivity;
 import com.tlh.electricsystem.desk.databinding.ItemDeskMenuBinding;
 
 import java.util.List;
@@ -56,6 +58,14 @@ public class DeskMenuAdapter extends RecyclerView.Adapter<DeskMenuAdapter.BindVi
 
                 if(position == 2){
                     context.startActivity(new Intent(context, DeskPatrolContentActivity.class));
+                }
+
+                if(position == 3){
+                    context.startActivity(new Intent(context, OperationTicketListActivity.class));
+                }
+
+                if(position == 4){
+                    context.startActivity(new Intent(context, WorkTicketListActivity.class));
                 }
             }
         });

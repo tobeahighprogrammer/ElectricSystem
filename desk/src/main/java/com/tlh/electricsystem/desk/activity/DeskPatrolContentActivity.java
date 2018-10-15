@@ -44,12 +44,6 @@ public class DeskPatrolContentActivity extends BaseActivity<ActivityPatrolConten
     @Override
     public void initData() {
         super.initData();
-        mBinding.includePatrolContentTitle.getRoot().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ARouter.getInstance().build(ARouterPath.DeviceContentActivity).navigation();
-            }
-        });
         mBinding.tlPatrolContent.setupWithViewPager(mBinding.vpPatrolContent);
 
         String[] mTitles = {"巡视内容", "巡视设备"};

@@ -6,28 +6,24 @@
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/shape_shadow_frame"
+        android:background="@android:color/white"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
-            android:id="@+id/tv_common_check_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="14sp"
-            android:textColor="@color/color_text_black"
+            android:textColor="@color/color_text_grey"
             android:text="巡视计划名称"/>
 
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/tv_common_check_value"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:button="@null"
-            android:textColor="@color/color_text_grey"
-            android:text="否"/>
+            android:textSize="14sp"
+            android:textColor="@color/color_text_black"
+            android:text="详情"/>
 
     </LinearLayout>
 </layout>

@@ -31,5 +31,6 @@ public class DeskPatrolCompleteActivity extends BaseActivity<ActivityDeskPatrolC
     @Override
     public void initData() {
         super.initData();
+        initToolbar(mBinding.toolbar);
     }
 }

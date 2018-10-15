@@ -16,6 +16,9 @@
         <activity android:name=".activity.DeskPatrolCompleteActivity"/>
         <activity android:name=".activity.DeskPatrolProcessActivity"/>
         <activity android:name=".activity.DeskPatrolDetailActivity"/>
+        <activity android:name=".activity.OperationTicketListActivity"/>
+        <activity android:name=".activity.OperationTicketDetailActivity"/>
+        <activity android:name=".activity.WorkTicketListActivity"/>
 
     </application>
 

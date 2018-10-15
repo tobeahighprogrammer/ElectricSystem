@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -7,11 +8,16 @@
         android:orientation="vertical"
         android:background="@color/color_background_grey">
 
-        <include
-            android:id="@+id/include_patrol_complete_title"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            layout="@layout/layout_title_bar"/>
+            android:layout_height="wrap_content"
+            android:background="@color/color_theme_green"
+            app:subtitle="巡视"
+            app:subtitleTextColor="@color/white"
+            app:navigationIcon="@mipmap/ic_launcher">
+
+        </android.support.v7.widget.Toolbar>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -32,47 +38,31 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <Button
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="10dp"
-            android:orientation="horizontal"
-            android:background="@drawable/shape_shadow_frame" >
+            android:background="@drawable/shape_button_green"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:text="提交设备缺陷"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/color_theme_green"
-                android:gravity="center"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                android:text="提交设备缺陷"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
+        <Button
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="10dp"
-            android:orientation="horizontal"
-            android:background="@drawable/shape_shadow_frame" >
+            android:background="@drawable/shape_button_green"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:text="提交设备隐患"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/color_theme_green"
-                android:gravity="center"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                android:text="提交设备隐患"/>
-
-        </RelativeLayout>
-
-        <TextView
+        <Button
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"
@@ -89,25 +79,17 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <RelativeLayout
+        <Button
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="10dp"
-            android:orientation="horizontal"
-            android:background="@drawable/shape_shadow_frame" >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/color_theme_green"
-                android:gravity="center"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                android:text="完成"/>
-
-        </RelativeLayout>
+            android:background="@drawable/shape_button_green"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:text="完成"/>
 
 
     </LinearLayout>

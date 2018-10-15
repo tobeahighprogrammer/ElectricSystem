@@ -32,6 +32,7 @@ public class DeskPatrolPlanActivity extends BaseActivity<ActivityDeskPatrolPlanB
     @Override
     public void initData() {
         super.initData();
+        initToolbar(mBinding.toolbar);
         mBinding.includePatrolPlanItem4.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -11,14 +11,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_background_grey"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/include_patrol_detail_title"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            layout="@layout/layout_title_bar"/>
+            android:layout_height="wrap_content"
+            android:background="@color/color_theme_green"
+            app:subtitle="巡视详情"
+            app:subtitleTextColor="@color/white"
+            app:navigationIcon="@mipmap/ic_launcher">
+
+        </android.support.v7.widget.Toolbar>
 
         <ScrollView
             android:layout_width="match_parent"

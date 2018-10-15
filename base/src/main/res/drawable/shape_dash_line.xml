@@ -4,7 +4,7 @@
     <size android:height="1dp" />
     <stroke
         android:dashGap="3dp"
-        android:dashWidth="8dp"
+        android:dashWidth="3dp"
         android:width="1dp"
         android:color="@color/color_theme_green" />
 </shape>
