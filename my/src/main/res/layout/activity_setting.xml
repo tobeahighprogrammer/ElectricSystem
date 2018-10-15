@@ -17,7 +17,7 @@
             android:background="@color/color_theme_green"
             app:subtitle="通用设置"
             app:subtitleTextColor="@color/white"
-            app:navigationIcon="@mipmap/ic_launcher">
+            >
 
         </android.support.v7.widget.Toolbar>
 

@@ -68,7 +68,7 @@ public class DeviceFragment extends BaseFragment< FragmentDeviceBinding , Device
             @Override
             public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
                 if (mViewModel != null) {
-                    mViewModel.startContainerActivity(DeviceInfoFragment.class.getCanonicalName());
+                    mViewModel.startContainerActivity(DeviceInfoFragment.class.getCanonicalName(),"设备");
                 }
             }
         });
