@@ -5,19 +5,22 @@ import android.os.Message;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
 import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.base.base.BaseViewModel;
 import com.tlh.electricsystem.databinding.ActivitySplashBinding;
+
 import java.lang.ref.SoftReference;
 import java.util.concurrent.TimeUnit;
+
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 
 /**
- *  sj: 2018年9月30日14:46:44
- *  name :ts
- *  用途L: 闪屏页面！
+ * sj: 2018年9月30日14:46:44
+ * name :ts
+ * 用途L: 闪屏页面！
  */
 public class SplashActivity extends BaseActivity<ActivitySplashBinding, BaseViewModel> {
     private Disposable mdDisposable;
@@ -51,14 +54,7 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, BaseView
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-    }
-
-    @Override
     public int initContentView(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme_NoActionBar);
         return R.layout.activity_splash;
     }
 
@@ -74,16 +70,17 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, BaseView
 
     @Override
     public void initData() {
-        super.initData();
         mBinding.timerText.setEnabled(false);
-        splashHander = new SplashHandler(this);
+        if (splashHander == null) {
+            splashHander = new SplashHandler(this);
+        }
         splashHander.sendEmptyMessageDelayed(0, 1000);
     }
 
     //设置计数时间
-    public void setTextMiss( Long aLong ) {
+    public void setTextMiss(Long aLong) {
         mBinding.timerText.setEnabled(true);
-        runOnUiThread(() -> mBinding.timerText.setText("跳过 "+(3 - aLong) ));
+        mBinding.timerText.setText("跳过 " + (3 - aLong));
     }
 
     //跳转登录页面
@@ -104,13 +101,15 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, BaseView
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mdDisposable != null) {
-            mdDisposable.dispose();
+        if ( mdDisposable != null ) {
+             mdDisposable.dispose() ;
         }
     }
 
     @Override
     public void initListener() {
-        mBinding.timerText.setOnClickListener(v -> { startAct(); });
+        mBinding.timerText.setOnClickListener(v -> {
+            startAct();
+        });
     }
 }

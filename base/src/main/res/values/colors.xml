@@ -35,4 +35,6 @@
     <color name="background_text_color">#808080</color>
     <color name="foreground_text_color">#eeeeee</color>
 
+    <color name="user_bg">#FBFBF9</color>
+
 </resources>

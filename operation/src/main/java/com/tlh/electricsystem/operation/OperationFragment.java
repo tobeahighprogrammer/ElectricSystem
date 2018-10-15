@@ -4,6 +4,7 @@ package com.tlh.electricsystem.operation;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ import java.util.List;
 public class OperationFragment extends BaseFragment<FragmentOperationBinding ,BaseViewModel> {
     private OperationAdapter mOperationAdapter ; //适配器列表
     private List<OperationBean> mOperationBeans ; //数据源
+    private View mHeaderView ; // 添加的headerView
     private List<OperationItemBean> operationItemBeans1;
     private List<OperationItemBean> operationItemBeans2;
     private List<OperationItemBean> operationItemBeans3;
@@ -60,6 +62,8 @@ public class OperationFragment extends BaseFragment<FragmentOperationBinding ,Ba
         mOperationBeans.add(operationBean2);
         mOperationBeans.add(operationBean3);
         mOperationAdapter = new OperationAdapter(R.layout.operation_item_layout,mOperationBeans);
+        mHeaderView  = LayoutInflater.from(m_Activity).inflate(R.layout.operation_header_layout ,null ,false);
+        mOperationAdapter.addHeaderView(mHeaderView);
         RecyclerViewHelper.initRecyclerViewV(m_Activity,mBinding.operationRecyclerView ,mOperationAdapter);
     }
 

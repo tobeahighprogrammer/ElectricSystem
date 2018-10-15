@@ -49,8 +49,9 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
         //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
         mBinding = DataBindingUtil.inflate(inflater, initContentView(inflater, container, savedInstanceState), container, false);
         BR_ID = initVariableId();
+        mViewModel = initViewModel();
         if (BR_ID != 0) {
-            mBinding.setVariable(initVariableId(), mViewModel = initViewModel());
+            mBinding.setVariable(initVariableId() ,mViewModel );
         }
     }
 
