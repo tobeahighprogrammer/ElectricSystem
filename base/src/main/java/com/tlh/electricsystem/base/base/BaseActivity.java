@@ -1,5 +1,6 @@
 package com.tlh.electricsystem.base.base;
 
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
@@ -29,6 +30,10 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //强制设置竖屏模式
+        if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_PORTRAIT){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         //获取传递的参数
         initParam();
         initViewDataBinding(savedInstanceState);
@@ -55,6 +60,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
 
     //初始化title
     public void initToolbar(Toolbar mToolbar) {
+        mToolbar.setNavigationIcon(R.mipmap.ic_launcher);
         //设置导航Button点击事件
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,8 +89,8 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
 
     //初始化title
     public void initToolbar(Toolbar mToolbar , int ResId ) {
-        mToolbar.setNavigationIcon(ResId);
         initToolbar(mToolbar);
+        mToolbar.setNavigationIcon(ResId);
     }
 
     //初始化title

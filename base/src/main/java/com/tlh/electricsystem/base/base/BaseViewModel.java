@@ -76,4 +76,14 @@ public   class BaseViewModel {
         mContext.startActivity(intent);
     }
 
+    /**
+     * 跳转容器页面
+     * @param canonicalName   Fragment.class.getCanonicalName()
+     */
+    public void startContainerActivity(String canonicalName ,String title) {
+        Intent intent = new Intent(mContext, ContainerActivity.class);
+        intent.putExtra(ContainerActivity.FRAGMENT, canonicalName);
+        intent.putExtra(ContainerActivity.TITLE, title);
+        mContext.startActivity(intent);
+    }
 }

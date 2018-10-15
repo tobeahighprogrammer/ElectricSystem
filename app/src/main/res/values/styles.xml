@@ -13,6 +13,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowNoTitle">true</item>
+        <!-- 状态栏颜色 -->
     </style>
     <style name="MyStyle">
 
