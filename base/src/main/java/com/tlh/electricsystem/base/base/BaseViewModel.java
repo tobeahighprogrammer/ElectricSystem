@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 /**
  * Created by Administrator on 2018/9/27 0027.
@@ -24,6 +26,8 @@ public   class BaseViewModel {
         this.mFragment = mFragment;
         this.mContext = mFragment.getContext();
     }
+
+
     /**
      * 跳转页面
      *

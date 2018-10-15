@@ -6,7 +6,10 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.TabHost;
 import android.widget.TextView;
 import com.tlh.electricsystem.R;
 import com.tlh.electricsystem.base.base.BaseViewModel;
@@ -42,9 +45,9 @@ public class MainViewModel extends BaseViewModel {
 
     //初始化Fragment
     private void initFragment(FragmentTabHost tabHost) {
-        setFragment(tabHost,"dynamic", "工作", R.mipmap.ic_launcher , DeskFragment.class);
-        setFragment(tabHost,"chat", "设备", R.mipmap.ic_launcher , DeviceFragment.class);
-        setFragment(tabHost,"find", "运维", R.mipmap.ic_launcher , OperationFragment.class);
+        setFragment(tabHost,"desk", "工作", R.mipmap.ic_launcher , DeskFragment.class);
+        setFragment(tabHost,"device", "设备", R.mipmap.ic_launcher , DeviceFragment.class);
+        setFragment(tabHost,"operation", "运维", R.mipmap.ic_launcher , OperationFragment.class);
         setFragment(tabHost,"user", "我的", R.mipmap.ic_launcher , UserFragment.class);
         tabHost.setCurrentTab(0);
     }
@@ -63,6 +66,26 @@ public class MainViewModel extends BaseViewModel {
         text.setCompoundDrawables(null, drawable, null, null);
         text.setText(name);
         return tabView;
+    }
+
+    //修改标题
+    public void setTabHostlistener( FragmentTabHost mTabHost ,Toolbar mToolbar){
+        mTabHost.setOnTabChangedListener(tabId -> {
+         switch (tabId){
+             case "desk":
+                 mToolbar.setSubtitle("工作台");
+                 break;
+             case "device":
+                 mToolbar.setSubtitle("设备");
+                 break;
+             case "operation":
+                 mToolbar.setSubtitle("运维");
+                 break;
+             case "user":
+                 mToolbar.setSubtitle("我的");
+                 break;
+         }
+        });
     }
 
 }

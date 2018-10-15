@@ -11,4 +11,6 @@ public interface IBaseActivity {
     void initData();
 
     void initListener();
+
+
 }

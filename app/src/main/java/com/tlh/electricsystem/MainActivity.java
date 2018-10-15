@@ -5,7 +5,11 @@ import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.databinding.ActivityMainBinding;
 import com.tlh.electricsystem.viewModel.MainViewModel;
 
-
+/**
+ * sj: 2018年10月15日15:27:24
+ * name: ts
+ * 用途：app主页面
+ */
 public class MainActivity extends BaseActivity< ActivityMainBinding , MainViewModel> {
 
     @Override
@@ -24,8 +28,14 @@ public class MainActivity extends BaseActivity< ActivityMainBinding , MainViewMo
     //初始化数据
     @Override
     public void initData() {
+        //初始化title栏
+        initToolbar(mBinding.toolbar);
+        //初始化页面
         mViewModel.initTabHost( mBinding.mainTabHost );
     }
 
-
+    @Override
+    public void initListener() {
+        mViewModel.setTabHostlistener(mBinding.mainTabHost , mBinding.toolbar);
+    }
 }
