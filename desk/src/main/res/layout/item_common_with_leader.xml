@@ -1,52 +1,61 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
-        android:gravity="center_vertical"
-        android:background="@drawable/shape_shadow_frame"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground">
 
-        <TextView
-            android:id="@+id/tv_common_leader_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="14sp"
-            android:textColor="@color/color_text_black"
-            android:text="巡视计划名称"/>
-
         <LinearLayout
-            android:layout_width="143dp"
-            android:layout_height="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:background="@drawable/shape_team_member_background"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
             <TextView
-                android:id="@+id/tv_common_leader_title"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@drawable/shape_team_member_title"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:id="@+id/tv_common_leader_member"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:id="@+id/tv_common_leader_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:textSize="14sp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@color/color_text_black"
+                android:text="巡视计划名称"/>
+
+            <LinearLayout
+                android:layout_width="143dp"
+                android:layout_height="32dp"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_team_member_background"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_common_leader_title"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/shape_team_member_title"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:text="T"/>
+
+                <TextView
+                    android:id="@+id/tv_common_leader_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#7f000000"
+                    android:text="Trevor Hansen"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
+    </android.support.v7.widget.CardView>
 
-    </LinearLayout>
 </layout>
 

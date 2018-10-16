@@ -35,10 +35,12 @@ public class OperationTicketListActivity extends BaseActivity<ActivityOperationT
     @Override
     public void initData() {
         super.initData();
+        mBinding.toolbar.setSubtitle("操作票");
 
         mBinding.rvOperationTicketList.setLayoutManager(new LinearLayoutManager(this));
 
         OperationTicketAdapter operationTicketAdapter = new OperationTicketAdapter(this, Arrays.asList("","",""));
+        operationTicketAdapter.setTicketType("operation");
         mBinding.rvOperationTicketList.setAdapter(operationTicketAdapter);
     }
 }

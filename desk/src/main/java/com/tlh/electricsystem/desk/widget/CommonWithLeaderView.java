@@ -17,6 +17,7 @@ public class CommonWithLeaderView extends LinearLayout {
 
     private TextView tvName;
     private TextView tvValue;
+    private TextView tvValueTitle;
 
     public CommonWithLeaderView(Context context) {
         super(context);
@@ -38,6 +39,7 @@ public class CommonWithLeaderView extends LinearLayout {
 
         tvName = findViewById(R.id.tv_common_leader_name);
         tvValue = findViewById(R.id.tv_common_leader_member);
+        tvValueTitle = findViewById(R.id.tv_common_leader_title);
     }
 
     public void setName(String name){
@@ -49,6 +51,7 @@ public class CommonWithLeaderView extends LinearLayout {
     public void setValue(String value){
         if(tvValue != null){
             tvValue.setText(TextUtils.isEmpty(value) ? "未填写" : value);
+            tvValueTitle.setText(TextUtils.isEmpty(value) ? "" : value.substring(0,1));
         }
     }
 }

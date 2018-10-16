@@ -18,7 +18,10 @@
         <activity android:name=".activity.DeskPatrolDetailActivity"/>
         <activity android:name=".activity.OperationTicketListActivity"/>
         <activity android:name=".activity.OperationTicketDetailActivity"/>
+        <activity android:name=".activity.OperationTicketProcessActivity"/>
         <activity android:name=".activity.WorkTicketListActivity"/>
+        <activity android:name=".activity.WorkTicketDetailActivity"/>
+        <activity android:name=".activity.WorkTicketProcessActivity"/>
 
     </application>
 

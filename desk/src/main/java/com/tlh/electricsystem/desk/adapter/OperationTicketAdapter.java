@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.tlh.electricsystem.desk.R;
 import com.tlh.electricsystem.desk.activity.DeskPatrolPlanActivity;
 import com.tlh.electricsystem.desk.activity.OperationTicketDetailActivity;
+import com.tlh.electricsystem.desk.activity.WorkTicketDetailActivity;
 import com.tlh.electricsystem.desk.databinding.ItemDeskTaskBinding;
 import com.tlh.electricsystem.desk.databinding.ItemOperationTicketBinding;
 
@@ -31,6 +32,15 @@ public class OperationTicketAdapter extends RecyclerView.Adapter<OperationTicket
         this.dataList = dataList;
     }
 
+    private String ticketType = "";
+
+    public String getTicketType() {
+        return ticketType;
+    }
+
+    public void setTicketType(String ticketType) {
+        this.ticketType = ticketType;
+    }
 
     @NonNull
     @Override
@@ -46,7 +56,11 @@ public class OperationTicketAdapter extends RecyclerView.Adapter<OperationTicket
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, OperationTicketDetailActivity.class));
+                if ("operation".equals(ticketType)) {
+                    context.startActivity(new Intent(context, OperationTicketDetailActivity.class));
+                } else if ("work".equals(ticketType)) {
+                    context.startActivity(new Intent(context, WorkTicketDetailActivity.class));
+                }
             }
         });
 

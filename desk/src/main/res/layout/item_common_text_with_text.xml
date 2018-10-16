@@ -4,11 +4,10 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@android:color/white"
         android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground">
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <TextView
             android:layout_width="0dp"
@@ -26,5 +25,6 @@
             android:text="详情"/>
 
     </LinearLayout>
+
 </layout>
 

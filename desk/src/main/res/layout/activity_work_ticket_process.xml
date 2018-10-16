@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/color_theme_green"
-            app:subtitle="操作票详情"
+            app:subtitle="工作票-变更"
             app:subtitleTextColor="@color/white"
             app:navigationIcon="@mipmap/ic_launcher">
 
@@ -80,19 +80,6 @@
                                 android:text="常规巡视"/>
 
                         </LinearLayout>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:background="@color/color_divider_grey"/>
-
-                        <include layout="@layout/item_common_text_with_text"/>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:background="@color/color_divider_grey"/>
-
-                        <include layout="@layout/item_common_text_with_text"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -110,7 +97,7 @@
         </ScrollView>
 
         <Button
-            android:id="@+id/btn_operation_ticket_detail_submit"
+            android:id="@+id/btn_work_ticket_process_submit"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"
@@ -120,8 +107,9 @@
             android:background="@drawable/shape_button_green"
             android:textSize="14sp"
             android:textColor="@android:color/white"
-            android:text="提交"
+            android:text="确认操作"
             android:gravity="center"/>
+
 
     </LinearLayout>
 

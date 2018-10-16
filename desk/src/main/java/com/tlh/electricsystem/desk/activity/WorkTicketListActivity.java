@@ -34,10 +34,13 @@ public class WorkTicketListActivity extends BaseActivity<ActivityOperationTicket
     @Override
     public void initData() {
         super.initData();
+        mBinding.toolbar.setSubtitle("工作票");
 
         mBinding.rvOperationTicketList.setLayoutManager(new LinearLayoutManager(this));
 
         OperationTicketAdapter operationTicketAdapter = new OperationTicketAdapter(this, Arrays.asList("","",""));
+        operationTicketAdapter.setTicketType("work");
         mBinding.rvOperationTicketList.setAdapter(operationTicketAdapter);
+
     }
 }
