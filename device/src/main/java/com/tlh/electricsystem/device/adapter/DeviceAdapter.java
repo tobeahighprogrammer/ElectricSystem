@@ -27,7 +27,7 @@ public class DeviceAdapter extends BaseMultiItemQuickAdapter<DeviceBean ,BaseVie
     }
 
     @Override
-    protected void convert( BaseViewHolder helper, DeviceBean item ) {
+    protected void convert( BaseViewHolder helper , DeviceBean item ) {
         if (helper.getItemViewType() == ITEM_TYPE_DEVICE_1){
             //
         }else if (helper.getItemViewType() == ITEM_TYPE_DEVICE_2){

@@ -1,202 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="144dp"
-    android:layout_margin="8dp"
-    android:background="@drawable/card_shape_all"
-    android:orientation="vertical">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:paddingLeft="16dp"
-            android:text="间隔名称"
-            android:textColor="@color/color_text_black"
-            android:textSize="14dp" />
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#ccc" />
-
-        <TextView
-            android:id="@+id/tv_device_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:paddingRight="8dp"
-            android:text="电站类型"
-            android:textColor="@color/white" />
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#ccc" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="8dp"
-            android:layout_toLeftOf="@+id/tv_device_type"
-            android:text="200V"
-            android:textColor="@color/color_text_grey"
-            android:textSize="9dp" />
-
-    </RelativeLayout>
-
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:foreground="?android:selectableItemBackground"
+    card_view:cardCornerRadius="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="144dp"
+        android:background="@color/white"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-            <!--android:background="@drawable/text_shape"-->
-            <TextView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/text_shape"
-                android:gravity="center"
-                android:text="22"
-                android:textColor="@color/color_text_black"
-                android:textStyle="bold" />
-            <!--android:textColor="@color/color_text_grey"-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="缺陷设备"
-                android:textSize="10dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-            <!--android:background="@drawable/text_shape"-->
-            <TextView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/text_shape"
-                android:gravity="center"
-                android:text="22"
-                android:textColor="@color/color_text_black"
-                android:textStyle="bold" />
-            <!--android:textColor="@color/color_text_grey"-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="缺陷设备"
-                android:textSize="10dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-            <!--android:background="@drawable/text_shape"-->
-            <TextView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/text_shape"
-                android:gravity="center"
-                android:text="22"
-                android:textColor="@color/color_text_black"
-                android:textStyle="bold" />
-            <!--android:textColor="@color/color_text_grey"-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="缺陷设备"
-                android:textSize="10dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-            <!--android:background="@drawable/text_shape"-->
-            <TextView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/text_shape"
-                android:gravity="center"
-                android:text="22"
-                android:textColor="@color/color_text_black"
-                android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="缺陷设备"
-                android:textSize="10dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-            <!--android:background="@drawable/text_shape"-->
-            <TextView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/text_shape"
-                android:gravity="center"
-                android:text="22"
+                android:layout_centerVertical="true"
+                android:paddingLeft="16dp"
+                android:text="间隔名称"
                 android:textColor="@color/color_text_black"
-                android:textStyle="bold" />
-            <!--android:textColor="@color/color_text_grey"-->
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/tv_device_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="8dp"
+                android:text="电站类型"
+                android:textColor="@color/white" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="缺陷设备"
-                android:textSize="10dp" />
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/tv_device_type"
+                android:text="200V"
+                android:textColor="@color/color_text_grey"
+                android:textSize="9dp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--android:background="@drawable/text_shape"-->
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textColor="@color/color_text_black"
+                    android:textStyle="bold" />
+                <!--android:textColor="@color/color_text_grey"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="缺陷设备"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--android:background="@drawable/text_shape"-->
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textColor="@color/color_text_black"
+                    android:textStyle="bold" />
+                <!--android:textColor="@color/color_text_grey"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="缺陷设备"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--android:background="@drawable/text_shape"-->
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textColor="@color/color_text_black"
+                    android:textStyle="bold" />
+                <!--android:textColor="@color/color_text_grey"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="缺陷设备"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--android:background="@drawable/text_shape"-->
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textColor="@color/color_text_black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="缺陷设备"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--android:background="@drawable/text_shape"-->
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textColor="@color/color_text_black"
+                    android:textStyle="bold" />
+                <!--android:textColor="@color/color_text_grey"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="缺陷设备"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="4dp"
+            android:paddingLeft="16dp"
+            android:text="维护班组"
+            android:textColor="@color/color_text_yellow"
+            android:textSize="12dp" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:drawablePadding="4dp"
-        android:paddingLeft="16dp"
-        android:text="维护班组"
-        android:textColor="@color/color_text_yellow"
-        android:textSize="12dp" />
-
-</LinearLayout>
+</android.support.v7.widget.CardView>

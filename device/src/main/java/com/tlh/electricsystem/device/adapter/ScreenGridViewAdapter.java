@@ -1,4 +1,4 @@
-package com.tlh.electricsystem.operation.adapter;
+package com.tlh.electricsystem.device.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,21 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
-import com.tlh.electricsystem.operation.R;
-import com.tlh.electricsystem.operation.bean.OperationItemBean;
-
+import com.tlh.electricsystem.device.R;
+import com.tlh.electricsystem.device.bean.ScreenItemBean;
 import java.util.List;
 
 /**
  * Created by Administrator on 2018/10/12 0012.
  */
 
-public class OperationGridViewAdapter  extends BaseAdapter{
+public class ScreenGridViewAdapter extends BaseAdapter{
     private Context mContext;
-    private List<OperationItemBean> operationItemBeanList;
+    private List<ScreenItemBean> operationItemBeanList;
 
-    public OperationGridViewAdapter(Context mContext, List<OperationItemBean> operationItemBeanList) {
+    public ScreenGridViewAdapter(Context mContext, List<ScreenItemBean> operationItemBeanList) {
         this.mContext = mContext;
         this.operationItemBeanList = operationItemBeanList;
     }
@@ -42,10 +40,10 @@ public class OperationGridViewAdapter  extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView =  LayoutInflater.from(mContext).inflate(R.layout.operation_grid_item_layout,null ,false);
-        OperationItemBean operationItemBean = operationItemBeanList.get(position);
-        TextView tvGridName  = convertView.findViewById(R.id.tv_grid_value);
-        tvGridName.setText(operationItemBean.getName());
+        convertView =  LayoutInflater.from(mContext).inflate(R.layout.grid_item_layout,null ,false);
+        ScreenItemBean screenItemBean = operationItemBeanList.get(position);
+        TextView tvGridName  = convertView.findViewById(R.id.tv_screen_value);
+        tvGridName.setText(screenItemBean.getValue());
         return convertView;
     }
 }

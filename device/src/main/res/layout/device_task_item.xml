@@ -1,111 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="171dp"
-    android:layout_margin="10dp"
-    android:background="@drawable/card_shape_all"
-    android:orientation="vertical">
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:foreground="?android:selectableItemBackground"
+    card_view:cardCornerRadius="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_weight="1"
-            android:text="设备轮换计划" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="8dp"
-            android:text="维护班组"
-            android:textColor="@color/color_text_yellow" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_height="171dp"
+        android:background="@color/white"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="设备轮换计划" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2018/09/20"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:text="维护班组"
+                android:textColor="@color/color_text_yellow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018/09/20"
+                    android:textColor="@color/color_theme_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:00"
+                    android:textColor="@color/color_theme_green"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间"
+                    android:textColor="@color/color_text_black" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="计划"
                 android:textColor="@color/color_theme_green" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="19:00"
-                android:textColor="@color/color_theme_green"
-                android:textSize="18dp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="开始时间"
-                android:textColor="@color/color_text_black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018/09/20"
+                    android:textColor="@color/color_theme_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:00"
+                    android:textColor="@color/color_theme_green"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间"
+                    android:textColor="@color/color_text_black" />
+            </LinearLayout>
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="计划"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bkcolor"
+            android:gravity="center"
+            android:text="状态：未提交"
             android:textColor="@color/color_theme_green" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2018/09/20"
-                android:textColor="@color/color_theme_green" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="19:00"
-                android:textColor="@color/color_theme_green"
-                android:textSize="18dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="开始时间"
-                android:textColor="@color/color_text_black" />
-        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:background="@color/bkcolor"
-        android:gravity="center"
-        android:text="状态：未提交"
-        android:layout_marginRight="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginBottom="2dp"
-        android:textColor="@color/color_theme_green" />
-
-</LinearLayout>
+</android.support.v7.widget.CardView>

@@ -10,17 +10,30 @@
     </data>
 
     <android.support.v4.widget.DrawerLayout
+        android:id="@+id/mDrawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/mToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_theme_green"
+                app:subtitle="设备详情"
+                app:subtitleTextColor="@color/white">
+
+            </android.support.v7.widget.Toolbar>
+
             <RelativeLayout
+                android:id="@+id/rel_device_info"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_below="@+id/mToolbar"
                 android:layout_margin="10dp"
                 android:background="@drawable/card_shape_all">
 
@@ -39,8 +52,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:paddingRight="8dp"
-                    android:textSize="10dp"
-                    android:text="电站类型" />
+                    android:text="电站类型"
+                    android:textSize="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -48,8 +61,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="8dp"
                     android:layout_toLeftOf="@+id/tv_device_type"
-                    android:textSize="10dp"
-                    android:text="200V" />
+                    android:text="200V"
+                    android:textSize="10dp" />
 
             </RelativeLayout>
 
@@ -58,6 +71,7 @@
                 android:id="@+id/tab_device_content"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_below="@+id/rel_device_info"
                 android:background="@color/white"
                 app:tl_indicator_color="#333333"
                 app:tl_indicator_gravity="BOTTOM"
@@ -70,18 +84,90 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/vp_device_content"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tab_device_content">
 
             </android.support.v4.view.ViewPager>
-        </LinearLayout>
-        <android.support.design.widget.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/card_shape_all"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_defect_state"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:text="缺陷状态"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_divider_grey" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:text="缺陷性质"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_divider_grey" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:text="是否消缺"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_screen"
+                android:layout_width="88dp"
+                android:layout_height="36dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="70dp"
+                android:background="@color/color_text_yellow"
+                android:gravity="center"
+                android:text="筛 选"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/right_drawer"
+            layout="@layout/device_screen_layout"
+            android:layout_width="240dp"
             android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            android:background="@color/white"
-            app:menu="@menu/activity_main_drawer" />
+            android:layout_gravity="end"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal">
+
+        </include>
 
     </android.support.v4.widget.DrawerLayout>
 

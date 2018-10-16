@@ -11,16 +11,16 @@
         android:layout_marginLeft="10dp"
         android:text="工作"
         android:textColor="@color/color_text_black"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
 
     <com.tlh.electricsystem.base.widget.MyGridView
         android:id="@+id/mGridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/grid_shape"
-        android:horizontalSpacing="0.5dp"
-        android:numColumns="4"
+        android:horizontalSpacing="12dp"
+        android:numColumns="3"
         android:stretchMode="columnWidth"
         android:verticalSpacing="0.5dp">
 

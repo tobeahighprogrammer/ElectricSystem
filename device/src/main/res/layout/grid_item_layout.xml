@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+        <TextView
+            android:id="@+id/tv_screen_value"
+            android:layout_width="71dp"
+            android:layout_height="35dp"
+            android:text="设备状态"
+            android:maxLength="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:background="@color/color_divider_grey"
+            android:textColor="@color/color_text_black"/>
+
+    <!--</RelativeLayout>-->
+
+</LinearLayout>

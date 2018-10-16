@@ -18,7 +18,7 @@
             android:background="@color/color_theme_green" />
 
         <TextView
-            android:id="@+id/tv_grid_name"
+            android:id="@+id/tv_grid_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

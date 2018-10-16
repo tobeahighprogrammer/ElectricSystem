@@ -1,5 +1,6 @@
 package com.tlh.electricsystem.base.base;
 
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
@@ -26,10 +27,11 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     protected V mBinding;
     protected VM mViewModel;
     protected int BR_ID;
-
+    protected Context mContext;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         //强制设置竖屏模式
         if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_PORTRAIT){
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
