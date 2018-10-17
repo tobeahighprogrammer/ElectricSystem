@@ -39,6 +39,7 @@
         </RelativeLayout>
 
         <Button
+            android:id="@+id/btn_submit_device_fault"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"
@@ -51,6 +52,7 @@
             android:text="提交设备缺陷"/>
 
         <Button
+            android:id="@+id/btn_submit_device_trouble"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"
@@ -63,6 +65,7 @@
             android:text="提交设备隐患"/>
 
         <Button
+            android:id="@+id/btn_check_device_detail"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"

@@ -45,6 +45,8 @@ public class DeskMenuAdapter extends RecyclerView.Adapter<DeskMenuAdapter.BindVi
         binding.tvDeskMenu.setText(name);
         binding.ivDeskMenu.setImageResource(R.mipmap.ic_launcher);
 
+        binding.tvDeskMenuMsg.setVisibility(position == 3 || position == 4 ? View.VISIBLE : View.INVISIBLE);
+
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

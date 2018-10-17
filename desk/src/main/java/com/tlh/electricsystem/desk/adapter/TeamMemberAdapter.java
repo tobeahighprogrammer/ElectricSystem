@@ -11,10 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tlh.electricsystem.desk.R;
-import com.tlh.electricsystem.desk.activity.DeskPatrolContentActivity;
-import com.tlh.electricsystem.desk.activity.DeskPatrolDetailActivity;
-import com.tlh.electricsystem.desk.activity.DeskPatrolProcessActivity;
-import com.tlh.electricsystem.desk.databinding.ItemDeskMenuBinding;
 import com.tlh.electricsystem.desk.databinding.ItemPatrolTeamMemberBinding;
 
 import java.util.List;

@@ -1,10 +1,14 @@
 package com.tlh.electricsystem.desk.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.base.base.BaseViewModel;
+import com.tlh.electricsystem.base.common.ARouterPath;
 import com.tlh.electricsystem.desk.R;
 import com.tlh.electricsystem.desk.databinding.ActivityDeskPatrolProcessBinding;
 import com.tlh.electricsystem.desk.widget.CommonDeviceNameView;
@@ -21,6 +25,7 @@ import java.util.Iterator;
 /**
  * 巡视流程页面
  */
+@Route(path = ARouterPath.DeskPatrolProcessActivity)
 public class DeskPatrolProcessActivity extends BaseActivity<ActivityDeskPatrolProcessBinding,BaseViewModel> {
 
     @Override
@@ -41,6 +46,13 @@ public class DeskPatrolProcessActivity extends BaseActivity<ActivityDeskPatrolPr
     @Override
     public void initData() {
         super.initData();
+
+        mBinding.btnPatrolSubmitComplete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DeskPatrolProcessActivity.this,DeskPatrolCompleteActivity.class));
+            }
+        });
 
         String[] descriptionData = {"提交基本信息", "提交数据抄录", "提交巡视结果"};
         mBinding.spbPatrolProgress.setStateDescriptionData(descriptionData);

@@ -13,16 +13,17 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/color_divider_grey"/>
-
             <ImageView
                 android:id="@+id/iv_desk_task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_divider_grey"
+                android:layout_alignParentBottom="true"/>
 
         </RelativeLayout>
 
@@ -35,14 +36,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6"
-            android:orientation="vertical"
-            android:paddingBottom="8dp">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginLeft="-8dp"
-                android:background="@color/color_divider_grey"/>
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +63,7 @@
                     android:layout_weight="1"
                     android:textSize="12sp"
                     android:textColor="@color/color_text_grey"
-                    android:text="截止"/>
+                    android:text="9月21日 18:00截止"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -137,6 +131,16 @@
                     android:text="200V"/>
 
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_divider_grey"/>
 
         </LinearLayout>
 

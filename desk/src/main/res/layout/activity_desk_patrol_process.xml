@@ -57,6 +57,7 @@
         </ScrollView>
         
         <Button
+            android:id="@+id/btn_patrol_submit_complete"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"

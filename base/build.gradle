@@ -4,8 +4,6 @@ apply plugin: 'realm-android'
 android {
     compileSdkVersion 27
 
-
-
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
@@ -14,13 +12,11 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [moduleName: project.getName()]
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
-
     }
 
     buildTypes {
@@ -32,31 +28,38 @@ android {
     dataBinding {
         enabled true
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support.constraint:constraint-layout:1.1.3'
+    compile 'com.android.support:design:27.1.1'
     compile('com.android.support:appcompat-v7:27.1.1') {
         exclude module: 'support-v4'
     }
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    compile 'com.android.support:cardview-v7:27.1.1'
     //    testImplementation 'junit:junit:4.12'
     //    androidTestImplementation 'com.android.support.test:runner:1.0.2'
     //    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //下拉刷新控件
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
-    //Rxjava 缓存
-    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
-    compile 'com.android.support:recyclerview-v7:27.1.1'
-    compile 'com.android.support:cardview-v7:27.1.1'
-    //Arouter
-    compile 'com.alibaba:arouter-api:1.3.1'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
-    compile 'com.android.support:design:27.1.1'
-    //适配器
+
+    //ARouter
+    compile 'com.alibaba:arouter-api:1.4.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+//    compile 'com.alibaba:arouter-annotation:1.0.6'
+
+    //RecyclerView适配器
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
     //网络
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //RxJava 缓存
+    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
     //tabLayout
     compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'
 }

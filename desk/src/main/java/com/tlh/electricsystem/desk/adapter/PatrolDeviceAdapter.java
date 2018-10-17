@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.tlh.electricsystem.base.common.ARouterPath;
 import com.tlh.electricsystem.desk.R;
 import com.tlh.electricsystem.desk.databinding.ItemPatrolContentBinding;
 import com.tlh.electricsystem.desk.databinding.ItemPatrolDeviceBinding;
@@ -48,7 +50,7 @@ public class PatrolDeviceAdapter extends RecyclerView.Adapter<PatrolDeviceAdapte
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ARouter.getInstance().build(ARouterPath.DeviceContentActivity).navigation();
             }
         });
     }

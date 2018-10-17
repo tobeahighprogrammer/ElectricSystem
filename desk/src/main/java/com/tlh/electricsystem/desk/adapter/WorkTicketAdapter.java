@@ -11,23 +11,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tlh.electricsystem.desk.R;
-import com.tlh.electricsystem.desk.activity.DeskPatrolPlanActivity;
 import com.tlh.electricsystem.desk.activity.OperationTicketDetailActivity;
 import com.tlh.electricsystem.desk.activity.WorkTicketDetailActivity;
-import com.tlh.electricsystem.desk.databinding.ItemDeskTaskBinding;
 import com.tlh.electricsystem.desk.databinding.ItemOperationTicketBinding;
+import com.tlh.electricsystem.desk.databinding.ItemWorkTicketBinding;
 
 import java.util.List;
 
 /**
  * 操作票工作票列表
  */
-public class OperationTicketAdapter extends RecyclerView.Adapter<OperationTicketAdapter.BindViewHolder> {
+public class WorkTicketAdapter extends RecyclerView.Adapter<WorkTicketAdapter.BindViewHolder> {
 
     private Context context;
     private List<String> dataList;
 
-    public OperationTicketAdapter(Context context, List<String> dataList){
+    public WorkTicketAdapter(Context context, List<String> dataList){
         this.context = context;
         this.dataList = dataList;
     }
@@ -35,18 +34,18 @@ public class OperationTicketAdapter extends RecyclerView.Adapter<OperationTicket
     @NonNull
     @Override
     public BindViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ViewDataBinding binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.item_operation_ticket,parent,false);
+        ViewDataBinding binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.item_work_ticket,parent,false);
         return new BindViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull BindViewHolder holder, int position) {
-        ItemOperationTicketBinding binding = (ItemOperationTicketBinding)holder.getBinding();
+        ItemWorkTicketBinding binding = (ItemWorkTicketBinding)holder.getBinding();
 
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, OperationTicketDetailActivity.class));
+                context.startActivity(new Intent(context, WorkTicketDetailActivity.class));
             }
         });
 

@@ -44,10 +44,11 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/shape_divider_green"/>
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layerType="software"
+                    android:background="@drawable/shape_dash_line"/>
 
                 <LinearLayout
                     android:id="@+id/ll_patrol_detail_container"
