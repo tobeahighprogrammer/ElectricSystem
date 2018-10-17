@@ -37,7 +37,7 @@ public class DeviceInfoFragment extends BaseFragment<FragmentDeviceInfoBinding ,
     private DeviceInfoAdapter mDeviceInfoAdapter ;
 
     @Override
-    public int initContentView(LayoutInflater inflater , @Nullable ViewGroup container , @Nullable Bundle savedInstanceState ) {
+    public int initContentView( LayoutInflater inflater , @Nullable ViewGroup container , @Nullable Bundle savedInstanceState ) {
         return R.layout.fragment_device_info;
     }
 

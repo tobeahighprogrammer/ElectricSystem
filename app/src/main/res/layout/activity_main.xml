@@ -33,7 +33,8 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/division_color" />
+            android:background="@color/division_color"
+            android:visibility="gone"/>
 
         <android.support.v4.app.FragmentTabHost
             android:id="@+id/main_tab_host"

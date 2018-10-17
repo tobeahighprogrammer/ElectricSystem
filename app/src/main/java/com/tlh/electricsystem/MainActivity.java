@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivity< ActivityMainBinding , MainViewMo
     }
 
     @Override
-    public int initVariableId() { return com.tlh.electricsystem.BR.ViewModel; }
+        public int initVariableId() { return com.tlh.electricsystem.BR.ViewModel; }
 
     @Override
     public MainViewModel initViewModel() {

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <TextView
@@ -13,17 +14,23 @@
         android:textColor="@color/color_text_black"
         android:textStyle="bold" />
 
-    <com.tlh.electricsystem.base.widget.MyGridView
-        android:id="@+id/mGridView"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/grid_shape"
-        android:horizontalSpacing="0.5dp"
-        android:numColumns="4"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="0.5dp">
+        card_view:cardCornerRadius="2dp"
+        >
 
-    </com.tlh.electricsystem.base.widget.MyGridView>
+        <com.tlh.electricsystem.base.widget.MyGridView
+            android:id="@+id/mGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.5dp"
+            android:numColumns="4"
+            android:background="@color/color_divider_grey"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.5dp">
 
+        </com.tlh.electricsystem.base.widget.MyGridView>
+    </android.support.v7.widget.CardView>
 </LinearLayout>

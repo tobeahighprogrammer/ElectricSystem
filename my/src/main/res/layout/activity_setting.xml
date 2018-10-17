@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -10,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.tlh.electricsystem.my.SettingActivity">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/mToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/color_theme_green"
             app:subtitle="通用设置"
-            app:subtitleTextColor="@color/white"
-            >
+            app:subtitleTextColor="@color/white">
 
         </android.support.v7.widget.Toolbar>
 
@@ -31,45 +32,51 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <android.support.v7.widget.CardView
+                    card_view:cardCornerRadius="2dp"
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/card_shape_all"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@color/color_theme_green" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="变电五通"
-                        android:textColor="@color/color_theme_green"
-                        android:textSize="12dp" />
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/color_theme_green" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="版本号：V0.0.1_1008"
-                        android:textColor="@color/color_text_grey"
-                        android:textSize="12dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="变电五通"
+                            android:textColor="@color/color_theme_green"
+                            android:textSize="12dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="当前版本为最新"
-                        android:textColor="@color/color_text_grey"
-                        android:textSize="10dp" />
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="版本号：V0.0.1_1008"
+                            android:textColor="@color/color_text_grey"
+                            android:textSize="12dp" />
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="当前版本为最新"
+                            android:textColor="@color/color_text_grey"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"

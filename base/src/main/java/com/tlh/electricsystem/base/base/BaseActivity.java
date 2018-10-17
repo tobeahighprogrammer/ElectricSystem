@@ -61,7 +61,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     }
 
     //初始化title
-    public void initToolbar(Toolbar mToolbar) {
+    protected void initToolbar(Toolbar mToolbar) {
         mToolbar.setNavigationIcon(R.mipmap.ic_launcher);
         //设置导航Button点击事件
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -90,13 +90,13 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     }
 
     //初始化title
-    public void initToolbar(Toolbar mToolbar , int ResId ) {
+    protected void initToolbar(Toolbar mToolbar , int ResId ) {
         initToolbar(mToolbar);
         mToolbar.setNavigationIcon(ResId);
     }
 
     //初始化title
-    public void initToolbar(Toolbar mToolbar , String  mTitle ) {
+    protected void initToolbar(Toolbar mToolbar , String  mTitle ) {
         mToolbar.setSubtitle(mTitle);
         initToolbar(mToolbar);
     }
