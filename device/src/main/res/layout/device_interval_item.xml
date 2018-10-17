@@ -6,8 +6,8 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:layout_marginTop="10dp"
-    android:orientation="vertical"
     android:foreground="?android:selectableItemBackground"
+    android:orientation="vertical"
     card_view:cardCornerRadius="2dp">
 
     <LinearLayout
@@ -219,16 +219,39 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
             android:background="@color/bkcolor"
-            android:gravity="center"
-            android:text="查看设备信息"
-            android:textColor="@color/color_theme_green"
-            android:textSize="14dp" />
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="查看设备信息"
+                android:textColor="@color/color_theme_green"
+                android:textSize="14dp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/color_divider_grey" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="查看设备信息"
+                android:textColor="@color/color_theme_green"
+                android:textSize="14dp" />
+        </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>
 
