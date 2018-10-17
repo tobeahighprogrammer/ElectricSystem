@@ -40,7 +40,6 @@ public class OperationTicketListActivity extends BaseActivity<ActivityOperationT
         mBinding.rvOperationTicketList.setLayoutManager(new LinearLayoutManager(this));
 
         OperationTicketAdapter operationTicketAdapter = new OperationTicketAdapter(this, Arrays.asList("","",""));
-        operationTicketAdapter.setTicketType("operation");
         mBinding.rvOperationTicketList.setAdapter(operationTicketAdapter);
     }
 }

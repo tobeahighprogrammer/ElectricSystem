@@ -7,6 +7,7 @@ import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.base.base.BaseViewModel;
 import com.tlh.electricsystem.desk.R;
 import com.tlh.electricsystem.desk.adapter.OperationTicketAdapter;
+import com.tlh.electricsystem.desk.adapter.WorkTicketAdapter;
 import com.tlh.electricsystem.desk.databinding.ActivityOperationTicketListBinding;
 
 import java.util.Arrays;
@@ -38,9 +39,8 @@ public class WorkTicketListActivity extends BaseActivity<ActivityOperationTicket
 
         mBinding.rvOperationTicketList.setLayoutManager(new LinearLayoutManager(this));
 
-        OperationTicketAdapter operationTicketAdapter = new OperationTicketAdapter(this, Arrays.asList("","",""));
-        operationTicketAdapter.setTicketType("work");
-        mBinding.rvOperationTicketList.setAdapter(operationTicketAdapter);
+        WorkTicketAdapter workTicketAdapter = new WorkTicketAdapter(this, Arrays.asList("","",""));
+        mBinding.rvOperationTicketList.setAdapter(workTicketAdapter);
 
     }
 }
