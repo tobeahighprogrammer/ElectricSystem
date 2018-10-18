@@ -45,10 +45,10 @@ public class MainViewModel extends BaseViewModel {
 
     //初始化Fragment
     private void initFragment(FragmentTabHost tabHost) {
-        setFragment(tabHost,"desk", "工作", R.mipmap.ic_launcher , DeskFragment.class);
-        setFragment(tabHost,"device", "设备", R.mipmap.ic_launcher , DeviceFragment.class);
-        setFragment(tabHost,"operation", "运维", R.mipmap.ic_launcher , OperationFragment.class);
-        setFragment(tabHost,"user", "我的", R.mipmap.ic_launcher , UserFragment.class);
+        setFragment(tabHost,"desk", "工作", R.mipmap.course_view_now , DeskFragment.class);
+        setFragment(tabHost,"device", "设备", R.mipmap.course_view_now , DeviceFragment.class);
+        setFragment(tabHost,"operation", "运维", R.mipmap.course_view_now , OperationFragment.class);
+        setFragment(tabHost,"user", "我的", R.mipmap.course_view_now , UserFragment.class);
         tabHost.setCurrentTab(0);
     }
 

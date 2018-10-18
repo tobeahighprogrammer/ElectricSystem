@@ -237,6 +237,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
                 android:foreground="?android:selectableItemBackground"
                 card_view:cardCornerRadius="2dp">
 
@@ -244,7 +245,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="51dp"
                     android:background="@color/white"
-
                     android:orientation="horizontal">
 
                     <ImageView

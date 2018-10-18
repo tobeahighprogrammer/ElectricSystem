@@ -10,18 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".DeskMainActivity"/>
-        <activity android:name=".activity.DeskPatrolPlanActivity"/>
-        <activity android:name=".activity.DeskPatrolContentActivity"/>
-        <activity android:name=".activity.DeskPatrolCompleteActivity"/>
-        <activity android:name=".activity.DeskPatrolProcessActivity"/>
-        <activity android:name=".activity.DeskPatrolDetailActivity"/>
-        <activity android:name=".activity.OperationTicketListActivity"/>
-        <activity android:name=".activity.OperationTicketDetailActivity"/>
-        <activity android:name=".activity.OperationTicketProcessActivity"/>
-        <activity android:name=".activity.WorkTicketListActivity"/>
-        <activity android:name=".activity.WorkTicketDetailActivity"/>
-        <activity android:name=".activity.WorkTicketProcessActivity"/>
+        <activity android:name=".DeskMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DeskPatrolPlanActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DeskPatrolContentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DeskPatrolCompleteActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DeskPatrolProcessActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DeskPatrolDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.OperationTicketListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.OperationTicketDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.OperationTicketProcessActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WorkTicketListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WorkTicketDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WorkTicketProcessActivity" android:screenOrientation="portrait" />
 
     </application>
 

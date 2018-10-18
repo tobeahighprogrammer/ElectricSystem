@@ -32,10 +32,6 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
-        //强制设置竖屏模式
-        if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_PORTRAIT){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
         //获取传递的参数
         initParam();
         initViewDataBinding(savedInstanceState);
@@ -62,7 +58,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
 
     //初始化title
     protected void initToolbar(Toolbar mToolbar) {
-        mToolbar.setNavigationIcon(R.mipmap.ic_launcher);
+        mToolbar.setNavigationIcon(R.mipmap.btn_sort);
         //设置导航Button点击事件
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
