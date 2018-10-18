@@ -22,9 +22,9 @@ import com.tlh.electricsystem.databinding.ActivityLoginBinding;
 
 public class LoginViewModel extends BaseViewModel<ActivityLoginBinding> {
     //存储账号的字符串
-    public ObservableField<String> userName = new ObservableField<>("");
+    public ObservableField<String> userName = new ObservableField<>("123456");
     //存储密码的字符串
-    public ObservableField<String> userPass = new ObservableField<>("");
+    public ObservableField<String> userPass = new ObservableField<>("admin");
 
 
     public LoginViewModel(ActivityLoginBinding mBinding, Context mContext) {

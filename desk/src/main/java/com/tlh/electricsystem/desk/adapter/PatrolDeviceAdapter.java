@@ -50,7 +50,7 @@ public class PatrolDeviceAdapter extends RecyclerView.Adapter<PatrolDeviceAdapte
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build(ARouterPath.DeviceContentActivity).navigation();
+                ARouter.getInstance().build(ARouterPath.IntervalActivity).navigation();
             }
         });
     }

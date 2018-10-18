@@ -3,7 +3,9 @@ package com.tlh.electricsystem.device.activity;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.tlh.electricsystem.base.base.BaseActivity;
+import com.tlh.electricsystem.base.common.ARouterPath;
 import com.tlh.electricsystem.base.utils.RecyclerViewHelper;
 import com.tlh.electricsystem.device.BR;
 import com.tlh.electricsystem.device.R;
@@ -19,6 +21,7 @@ import java.util.List;
  * name : ts
  * 用途： 展示间隔详情列表
  */
+@Route(path = ARouterPath.IntervalActivity)
 public class IntervalActivity extends BaseActivity<FragmentIntervalBinding, IntervalViewModel> {
     private List<IntervalBean> mIntervalBeans ;
     private IntervalAdapter mIntervalAdapter ;

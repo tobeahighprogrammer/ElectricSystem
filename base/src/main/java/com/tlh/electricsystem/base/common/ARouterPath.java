@@ -5,4 +5,5 @@ public class ARouterPath {
     public static final String DeviceContentActivity = "/device/DeviceContentActivity";
     public static final String DeskPatrolPlanActivity = "/desk/DeskPatrolPlanActivity";
     public static final String DeskPatrolProcessActivity = "/desk/DeskPatrolProcessActivity";
+    public static final String IntervalActivity = "/device/IntervalActivity";
 }
