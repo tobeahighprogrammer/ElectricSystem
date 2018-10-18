@@ -329,7 +329,7 @@ public class StateProgressBar extends View {
 
     private void validateStateSize() {
         if (mStateSize <= mStateNumberTextSize) {
-            mStateSize = mStateNumberTextSize + mStateNumberTextSize / 2;
+            mStateSize = mStateNumberTextSize + mStateNumberTextSize;
         }
     }
 
