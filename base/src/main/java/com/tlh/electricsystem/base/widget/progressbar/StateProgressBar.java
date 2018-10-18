@@ -932,7 +932,31 @@ public class StateProgressBar extends View {
         int startIndex = mIsStateNumberDescending ? 0 : mCurrentStateNumber - 1;
         int endIndex = mIsStateNumberDescending ? mMaxStateNumber - mCurrentStateNumber + 1 : mMaxStateNumber;
 
-        drawLines(canvas, mBackgroundPaint, startIndex, endIndex);
+        drawBackgroundLines(canvas, mBackgroundPaint, startIndex, endIndex);
+    }
+
+    private void drawBackgroundLines(Canvas canvas, Paint paint, int startIndex, int endIndex) {
+
+        float startCenterX;
+        float endCenterX;
+
+        float startX;
+        float stopX;
+
+
+        if (endIndex > startIndex) {
+
+            startCenterX = mCellWidth / 2 + mCellWidth * startIndex;
+
+            endCenterX = mCellWidth * endIndex - (mCellWidth / 2);
+
+            startX = startCenterX + (mStateRadius * 0.75f);
+            stopX = endCenterX - (mStateRadius * 0.75f);
+
+            canvas.drawLine(0, mCellHeight / 2, getWidth(), mCellHeight / 2, paint);
+
+        }
+
     }
 
     private void drawForegroundLines(Canvas canvas) {
@@ -941,7 +965,6 @@ public class StateProgressBar extends View {
 
         drawLines(canvas, mForegroundPaint, startIndex, endIndex);
     }
-
 
     private void drawLines(Canvas canvas, Paint paint, int startIndex, int endIndex) {
 
