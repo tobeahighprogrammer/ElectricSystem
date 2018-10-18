@@ -1,15 +1,13 @@
 package com.tlh.electricsystem;
 
 import android.os.Bundle;
-import com.tlh.electricsystem.BR;
 import com.tlh.electricsystem.base.base.BaseActivity;
 import com.tlh.electricsystem.databinding.ActivityLoginBinding;
 import com.tlh.electricsystem.viewModel.LoginViewModel;
 
 public class LoginActivity extends BaseActivity<ActivityLoginBinding  , LoginViewModel> {
-
     @Override
-    public int initContentView(Bundle savedInstanceState) {
+    public int initContentView( Bundle savedInstanceState ) {
         return R.layout.activity_login;
     }
 
@@ -20,6 +18,6 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding  , LoginVie
 
     @Override
     public LoginViewModel initViewModel() {
-        return new LoginViewModel(this);
+        return new LoginViewModel(mBinding ,this);
     }
 }

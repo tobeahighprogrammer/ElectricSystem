@@ -11,10 +11,17 @@ import android.view.View;
  * Created by Administrator on 2018/9/27 0027.
  */
 
-public   class BaseViewModel {
+public   class BaseViewModel<T> {
 
     protected Context mContext;
     protected Fragment mFragment ;
+    protected T mBinding ;
+
+    //吧binding 传进来
+    public BaseViewModel(T mBinding , Context mContext ) {
+        this.mBinding = mBinding;
+        this.mContext = mContext;
+    }
 
     //Activity 的上下文对象
     public BaseViewModel( Context mContext ) {
