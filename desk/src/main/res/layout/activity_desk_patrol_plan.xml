@@ -19,8 +19,7 @@
             android:layout_height="wrap_content"
             android:background="@color/color_theme_green"
             app:subtitle="巡视计划"
-            app:subtitleTextColor="@color/white"
-            app:navigationIcon="@mipmap/ic_launcher">
+            app:subtitleTextColor="@color/white">
 
         </android.support.v7.widget.Toolbar>
 
