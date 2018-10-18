@@ -7,12 +7,13 @@ import android.view.View;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.tlh.electricsystem.base.base.BaseViewModel;
+import com.tlh.electricsystem.device.activity.IntervalActivity;
 import com.tlh.electricsystem.device.bean.DeviceInfoBean;
-import com.tlh.electricsystem.device.databinding.FragmentDeviceInfoBinding;
-import com.tlh.electricsystem.device.fragment.IntervalFragment;
 
 /**
- * Created by Administrator on 2018/9/29 0029.
+ * sj：2018年10月18日11:52:45
+ * name : ts
+ * 用途：设备信息的ViewModel
  */
 
 public class DeviceInfoViewModel extends BaseViewModel {
@@ -27,8 +28,7 @@ public class DeviceInfoViewModel extends BaseViewModel {
             @Override
             public void onSimpleItemClick( BaseQuickAdapter adapter , View view , int position ) {
                 mDeviceInfoBean = ( DeviceInfoBean ) adapter.getItem( position ) ;
-                //使用fragment
-                startContainerActivity( IntervalFragment.class.getCanonicalName() ,"间隔详情" );
+                startActivity(IntervalActivity.class);
             }
         });
     }
