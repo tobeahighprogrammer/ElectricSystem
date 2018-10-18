@@ -33,12 +33,12 @@ public class LoginViewModel extends BaseViewModel<ActivityLoginBinding> {
 
     //登录的监听
     public void login( View view ){
-        if (!userName.get().equals("123456") || !userPass.get().equals("admin")){
+        if (!userName.get().equals("123456") || !userPass.get().equals("admin") ){
             ToastUtil.showShortToast( mContext.getApplicationContext() , "账号密码不匹配!请输入正确.." );
         } else {
             if (mBinding.meloginEtPhone.isFocusable()) {
                 EditTextUtils.hideInput(mBinding.meloginEtPhone);
-            }else{
+            } else {
                 EditTextUtils.hideInput(mBinding.meloginEtPass);
             }
             startActivity(MainActivity.class); //跳转
@@ -64,16 +64,14 @@ public class LoginViewModel extends BaseViewModel<ActivityLoginBinding> {
     //密码的输入监听
     public final TextWatcher OnUserPassChange = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        public void onTextChanged( CharSequence s, int start, int before, int count ) {
             userPass.set(s.toString());
         }
 
         @Override
-        public void afterTextChanged(Editable s) {
-        }
+        public void afterTextChanged(Editable s) { }
     };
 }

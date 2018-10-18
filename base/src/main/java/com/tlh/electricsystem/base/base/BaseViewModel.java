@@ -23,6 +23,13 @@ public   class BaseViewModel<T> {
         this.mContext = mContext;
     }
 
+    //吧binding 传进来
+    public BaseViewModel(T mBinding , Fragment mFragment  ) {
+        this.mBinding = mBinding;
+        this.mFragment = mFragment;
+        this.mContext =  mFragment.getContext();
+    }
+
     //Activity 的上下文对象
     public BaseViewModel( Context mContext ) {
         this.mContext = mContext;
