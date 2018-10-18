@@ -1,9 +1,14 @@
 package com.tlh.electricsystem.device;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.RelativeLayout;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.tlh.electricsystem.base.base.BaseActivity;
@@ -60,6 +65,15 @@ public class DeviceContentActivity extends BaseActivity<ActivityDeviceContentBin
         initToolbar(mBinding.mToolbar);
         //2.初始化抽屉布局
         mScreenBeans = new ArrayList<>();
+        WindowManager wm = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics dm = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(dm);
+        int width = dm.widthPixels;         // 屏幕宽度（像素）
+        //设置抽屉的宽度
+        DrawerLayout.LayoutParams params = (DrawerLayout.LayoutParams) mBinding.rightDrawer.getRoot().getLayoutParams();
+        params.width =width / 3 * 2;
+        params.height = RelativeLayout.LayoutParams.MATCH_PARENT;
+        mBinding.rightDrawer.getRoot().setLayoutParams(params);
         setDate1();
         setDate2();
         setDate3();
@@ -176,6 +190,20 @@ public class DeviceContentActivity extends BaseActivity<ActivityDeviceContentBin
             @Override
             public void onClick(View v) {
                mViewModel.showUpPop(mBinding.tvDefectState,mContext,DeviceContentActivity.this);
+            }
+        });
+        //抽屉重置的监听
+        mBinding.rightDrawer.tvReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mBinding.mDrawerLayout.closeDrawer(Gravity.RIGHT);
+            }
+        });
+        //抽屉确定的监听
+        mBinding.rightDrawer.tvSure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mBinding.mDrawerLayout.closeDrawer(Gravity.RIGHT);
             }
         });
     }

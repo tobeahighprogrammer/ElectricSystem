@@ -4,6 +4,7 @@ import android.support.annotation.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.tlh.electricsystem.device.R;
 import com.tlh.electricsystem.device.bean.IntervalBean;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class IntervalAdapter extends BaseQuickAdapter<IntervalBean , BaseViewHol
 
     @Override
     protected void convert(BaseViewHolder helper, IntervalBean item) {
-
+        helper.addOnClickListener(R.id.tv_device_info);
+        helper.addOnClickListener(R.id.tv_patrol);
     }
 }

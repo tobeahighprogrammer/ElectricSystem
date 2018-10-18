@@ -62,5 +62,6 @@ public class IntervalFragment extends BaseFragment<FragmentIntervalBinding , Int
     @Override
     public void initListener() {
         mViewModel.addOnItemTouchListener(mBinding.intervalInfoRecyclerView);
+        mViewModel.addOnItemChildTouchListener(mBinding.intervalInfoRecyclerView);
     }
 }

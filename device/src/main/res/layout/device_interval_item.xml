@@ -226,12 +226,13 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_patrol"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="查看设备信息"
+                android:text="查看巡视记录"
                 android:textColor="@color/color_theme_green"
                 android:textSize="14dp" />
 
@@ -243,6 +244,7 @@
                 android:background="@color/color_divider_grey" />
 
             <TextView
+                android:id="@+id/tv_device_info"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"

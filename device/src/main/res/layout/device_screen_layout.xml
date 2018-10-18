@@ -39,6 +39,7 @@
             >
 
             <TextView
+                android:id="@+id/tv_Reset"
                 android:layout_width="88dp"
                 android:layout_height="36dp"
                 android:background="@drawable/darkgreen_shape"
@@ -48,6 +49,7 @@
                 android:layout_marginRight="8dp"/>
 
             <TextView
+                android:id="@+id/tv_Sure"
                 android:layout_width="88dp"
                 android:layout_height="36dp"
                 android:background="@drawable/green_shape"
