@@ -16,12 +16,12 @@
         <!-- 状态栏颜色 -->
     </style>
     <style name="MyStyle">
-
-        <item name="android:textColor">#BA92E7</item>
-
         <item name="android:textSize">12sp</item>
-
+        <item name="android:textColor">@color/editext_color</item>
+        <item name="colorControlNormal">@color/editext_color</item>
+        <item name="colorControlActivated">@color/editext_color</item>
     </style>
+
     <!--no title bar -->
     <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>

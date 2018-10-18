@@ -26,8 +26,7 @@ public class LoginViewModel extends BaseViewModel<ActivityLoginBinding> {
     //存储密码的字符串
     public ObservableField<String> userPass = new ObservableField<>("admin");
 
-
-    public LoginViewModel(ActivityLoginBinding mBinding, Context mContext) {
+    public LoginViewModel( ActivityLoginBinding mBinding, Context mContext ) {
         super(mBinding, mContext);
     }
 
@@ -54,6 +53,7 @@ public class LoginViewModel extends BaseViewModel<ActivityLoginBinding> {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             userName.set(s.toString());
+            mBinding.meloginEtPhone.setSelection(s.length());
         }
 
         @Override

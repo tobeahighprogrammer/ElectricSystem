@@ -28,7 +28,9 @@
                 android:id="@+id/elogin_et_phone_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintTextAppearance="@style/MyStyle">
+                android:hint="输入PMS用户名"
+                android:textColorHint="@color/editext_color"
+                android:theme="@style/MyStyle">
 
                 <EditText
                     android:id="@+id/melogin_et_phone"
@@ -36,13 +38,11 @@
                     android:layout_height="50dp"
                     android:backgroundTint="@color/editext_color"
                     android:gravity="left|center_vertical"
-                    android:hint="输入PMS用户名"
                     android:inputType="phone"
                     android:maxLength="11"
                     android:addTextChangedListener="@{LoginViewModel.OnUserNameChange}"
                     android:text="@{LoginViewModel.userName}"
                     android:textColor="@color/white"
-                    android:textColorHint="@color/editext_color"
                     android:textSize="14dp" />
 
             </android.support.design.widget.TextInputLayout>
@@ -56,6 +56,7 @@
                 android:layout_centerVertical="true"
                 android:padding="5dp"
                 android:visibility="visible" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -69,7 +70,10 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintTextAppearance="@style/MyStyle">
+                android:hint="请输入密码"
+                android:textColorHint="@color/editext_color"
+                android:theme="@style/MyStyle"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/melogin_et_pass"
@@ -77,13 +81,11 @@
                     android:layout_height="50dp"
                     android:backgroundTint="@color/editext_color"
                     android:gravity="left|center_vertical"
-                    android:hint="请输入密码"
                     android:inputType="textPassword"
                     android:maxLength="32"
                     android:addTextChangedListener="@{LoginViewModel.OnUserPassChange}"
                     android:text="@{LoginViewModel.userPass}"
                     android:textColor="@color/white"
-                    android:textColorHint="@color/editext_color"
                     android:textSize="14dp" />
 
             </android.support.design.widget.TextInputLayout>
