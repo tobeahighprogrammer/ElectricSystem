@@ -1093,14 +1093,14 @@ public class StateProgressBar extends View {
                             }
 
                             if (nextLineCounter <= mMaxDescriptionLine) {
-                                yPos = (int) (mCellHeight + (nextLineCounter * mStateDescriptionSize) - mSpacing - mDescTopSpaceDecrementer + mDescTopSpaceIncrementer + (nextLineCounter > 1 ? (mDescriptionLinesSpacing * (nextLineCounter - 1)) : 0));//mSpacing = mStateNumberForegroundPaint.getTextSize()
+                                yPos = (int) (mCellHeight + (nextLineCounter * mStateDescriptionSize) - mSpacing - mDescTopSpaceDecrementer + mDescTopSpaceIncrementer + (nextLineCounter > 1 ? (mDescriptionLinesSpacing * (nextLineCounter - 1)) : 0)) + 5;//mSpacing = mStateNumberForegroundPaint.getTextSize()
                                 canvas.drawText(line, newXPos == 0 ? xPos : newXPos, yPos, innerPaintType);
                             }
 
                         }
 
                     } else {
-                        yPos = (int) (mCellHeight + mStateDescriptionSize - mSpacing - mDescTopSpaceDecrementer + mDescTopSpaceIncrementer);//mSpacing = mStateNumberForegroundPaint.getTextSize()
+                        yPos = (int) (mCellHeight + mStateDescriptionSize - mSpacing - mDescTopSpaceDecrementer + mDescTopSpaceIncrementer) + 5;//mSpacing = mStateNumberForegroundPaint.getTextSize()
                         canvas.drawText(mIsStateNumberDescending ? mStateDescriptionData.get(mStateDescriptionData.size() - 1 - i) : mStateDescriptionData.get(i), xPos, yPos, innerPaintType);
                     }
 
