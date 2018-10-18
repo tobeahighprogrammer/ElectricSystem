@@ -84,6 +84,7 @@
 
         <include
             android:id="@+id/rl_location"
+            android:visibility="gone"
             layout="@layout/button_location_layout" />
 
     </RelativeLayout>
