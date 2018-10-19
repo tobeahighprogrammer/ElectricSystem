@@ -31,24 +31,12 @@
                 android:padding="10dp"
                 android:orientation="vertical">
 
-                <com.tlh.electricsystem.base.widget.progressbar.StateProgressBar
+                <com.tlh.electricsystem.base.widget.StateProgressBar
                     android:id="@+id/spb_patrol_progress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="14dp"
-                    app:spb_currentStateNumber="two"
-                    app:spb_maxStateNumber="three"
-                    app:spb_stateBackgroundColor="#E0E0D8"
-                    app:spb_stateForegroundColor="#009D85"
-                    app:spb_stateDescriptionSize="10sp"
-                    app:spb_stateTextSize="10sp"
-                    app:spb_stateNumberBackgroundColor="@color/color_text_black"
-                    app:spb_stateNumberForegroundColor="@android:color/white"
-                    app:spb_currentStateDescriptionColor="@color/color_text_grey"
-                    app:spb_stateDescriptionColor="@color/color_text_grey"
-                    app:spb_animateToCurrentProgressState="true"
-                    app:spb_checkStateCompleted="true"/>
+                    android:layout_marginBottom="10dp"/>
 
 
             </LinearLayout>
